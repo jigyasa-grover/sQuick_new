@@ -1,0 +1,20 @@
+{
+	"category" : "sQuick_new-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"header",
+		"searchFor",
+		"srchBtn",
+		"helpBtn",
+		"aboutBtn",
+		"feedBtn",
+		"box" ],
+	"name" : "IndexInterface",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
