@@ -1,0 +1,22 @@
+{
+	"category" : "searchQuick-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"searchLabel",
+		"searchField",
+		"searchButton",
+		"header",
+		"textLabel",
+		"result1",
+		"result2",
+		"result3",
+		"result4" ],
+	"name" : "IndexInterface",
+	"pools" : [
+		 ],
+	"super" : "ComposableModel",
+	"type" : "normal" }
