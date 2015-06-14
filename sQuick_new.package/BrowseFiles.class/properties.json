@@ -1,20 +1,20 @@
 {
 	"category" : "sQuick_new-UI",
 	"classinstvars" : [
-		 ],
+		"instance" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"header",
-		"searchFor",
-		"srchBtn",
-		"helpBtn",
-		"aboutBtn",
-		"feedBtn",
+		"searchHdr",
+		"ptm",
+		"txtViewer",
+		"browse",
+		"browseHdr",
 		"box",
-		"browseBtn" ],
-	"name" : "IndexInterface",
+		"interface" ],
+	"name" : "BrowseFiles",
 	"pools" : [
 		 ],
 	"super" : "Object",

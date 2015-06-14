@@ -1,0 +1,15 @@
+{
+	"category" : "sQuick_new-accessingFiles",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"title",
+		"content" ],
+	"name" : "Chapter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

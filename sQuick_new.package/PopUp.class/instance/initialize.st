@@ -1,0 +1,39 @@
+as yet unclassified
+initialize
+
+	| font resourceFolder |
+	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
+	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 4.
+	
+	StandardFonts listFont: font .
+	StandardFonts menuFont: font.
+	StandardFonts codeFont: font .
+	StandardFonts buttonFont: font .
+	StandardFonts defaultFont: font .
+	StandardFonts windowTitleFont: font.
+		
+	header := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'header.gif').
+	header position: 0@0.
+	
+	title := TextMorph new.
+	title newContents: 'Searching....'.
+	title position: 100@100.
+	title extent: 100@100.
+	
+	backBtn := SimpleButtonMorph newWithLabel: 'Back'.
+	backBtn color: Color paleTan .
+	backBtn borderColor: Color brown .
+	backBtn borderWidth: 3.
+	backBtn helpText: 'How to use sQuick'.
+	backBtn roundedCorners: 4 .
+	backBtn position: 300@400.
+	backBtn extent: 100@50.
+	backBtn on: #click send: #value to: [IndexInterface open].
+	
+	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'geoBG.gif').
+	box extent: 200@200.
+	box addMorph: header.
+	box addMorph: title .
+	box addMorph: backBtn .
+	box openInWindowLabeled: 'sQuick'.
+	

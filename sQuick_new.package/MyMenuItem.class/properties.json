@@ -1,0 +1,16 @@
+{
+	"category" : "sQuick_new-accessingFiles",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"chapter",
+		"mainInterface",
+		"interface" ],
+	"name" : "MyMenuItem",
+	"pools" : [
+		 ],
+	"super" : "MenuItemMorph",
+	"type" : "normal" }

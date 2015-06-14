@@ -7,14 +7,10 @@
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"header",
-		"searchFor",
-		"srchBtn",
-		"helpBtn",
-		"aboutBtn",
-		"feedBtn",
-		"box",
-		"browseBtn" ],
-	"name" : "IndexInterface",
+		"title",
+		"backBtn",
+		"box" ],
+	"name" : "PopUp",
 	"pools" : [
 		 ],
 	"super" : "Object",

@@ -17,13 +17,8 @@ Public API and Key Messages
 Internal Representation and Key Implementation Points.
 
     Instance Variables
-	aboutBtn:		<Object>
-	box:		<Object>
-	feedBtn:		<Object>
-	header:		<Object>
-	helpBtn:		<Object>
-	searchFor:		<Object>
-	srchBtn:		<Object>
+	content:		<Object>
+	title:		<Object>
 
 
     Implementation Points
