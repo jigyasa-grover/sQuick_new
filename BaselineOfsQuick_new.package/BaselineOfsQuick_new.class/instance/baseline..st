@@ -4,5 +4,5 @@ baseline: spec
     spec 
       for: #pharo
       do: [
-        spec package: 'sQuick_new ' 
+        spec package: 'sQuick_new' 
              ].
