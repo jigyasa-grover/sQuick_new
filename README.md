@@ -11,6 +11,6 @@
 
 - UI build in progress.
 
-- Do_It 'MainInterface open' in Playground/Workspace to check it out.
+- Do_It 'IndexInterface open' in Playground/Workspace to check it out.
 
 
