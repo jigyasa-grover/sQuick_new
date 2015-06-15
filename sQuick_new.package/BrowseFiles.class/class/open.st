@@ -1,3 +1,5 @@
 as yet unclassified
 open	
-	self new.
+	"super open."
+	self delete.
+	self run.
