@@ -1,9 +1,9 @@
 as yet unclassified
 initialize
 
-	| font resourceFolder |
+	| font resourceFolder d|
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
-	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 4.
+	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
 	
 	StandardFonts listFont: font .
 	StandardFonts menuFont: font.
@@ -12,7 +12,7 @@ initialize
 	StandardFonts defaultFont: font .
 	StandardFonts windowTitleFont: font.
 	
-	header := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'header.gif').
+	header := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_header.gif').
 	header position: 0@0.
 		
 	searchHdr := TextMorph new.
@@ -24,7 +24,7 @@ initialize
 	ptm := PluggableTextMorph new.
 	ptm alwaysShowVScrollBar: true.
 	ptm position: 300@250.
-	ptm extent: 800@300.	
+	ptm extent: 600@300.	
 	txtViewer := ptm textMorph.
 	
 	browse := MenuMorph new.
@@ -64,10 +64,23 @@ initialize
 
 	"---------------------------------------------------------"
 	
-	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'geoBG.gif').
+	timeStamp := TextMorph new.
+	d := DateAndTime now asTime.
+	timeStamp newContents: d asString .
+	timeStamp position: 100@480.
+	timeStamp  extent: 150@50.
+	dateStamp := TextMorph new.
+	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
+	dateStamp newContents: d asString .
+	dateStamp position: 100@500.
+	dateStamp extent: 150@50.
+	
+	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').
 	box extent: (World extent ).
 	box addMorph: header.
 	box addMorph: searchHdr .
+	box addMorph: timeStamp .
+	box addMorph: dateStamp .
 	box addMorph: ptm.
 	box addMorph: browse .
 	box openInWindow .

@@ -13,7 +13,9 @@
 		"aboutBtn",
 		"feedBtn",
 		"box",
-		"browseBtn" ],
+		"browseBtn",
+		"timeStamp",
+		"dateStamp" ],
 	"name" : "IndexInterface",
 	"pools" : [
 		 ],

@@ -1,9 +1,9 @@
 as yet unclassified
 initialize
 
-	| font resourceFolder |
+	| font resourceFolder d |
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
-	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 4.
+	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
 	
 	StandardFonts listFont: font .
 	StandardFonts menuFont: font.
@@ -12,7 +12,7 @@ initialize
 	StandardFonts defaultFont: font .
 	StandardFonts windowTitleFont: font.
 		
-	header := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'header.gif').
+	header := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_header.gif').
 	header position: 0@0.
 		
 	"searchFor := TextMorphForEditView new."
@@ -44,6 +44,17 @@ initialize
 	browseBtn extent: 100@50.
 	browseBtn on: #click send: #value to: [BrowseFiles open].
 		
+			
+	timeStamp := TextMorph new.
+	d := DateAndTime now asTime.
+	timeStamp newContents: d asString .
+	timeStamp position: 100@480.
+	timeStamp  extent: 150@50.
+	dateStamp := TextMorph new.
+	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
+	dateStamp newContents: d asString .
+	dateStamp position: 100@500.
+	dateStamp extent: 150@50.	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
@@ -73,12 +84,14 @@ initialize
 	feedBtn extent: 100@50.
 	
 	
-	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'bg.gif').
+	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_bg.gif').
 	box extent: 200@200.
 	box addMorph: header.
 	box addMorph: searchFor .
 	box addMorph: srchBtn.
 	box addMorph: browseBtn.
+	box addMorph: dateStamp.
+	box addMorph: timeStamp.
 	box addMorph: helpBtn .
 	box addMorph: aboutBtn.
 	box addMorph: feedBtn .

@@ -9,7 +9,9 @@
 		"header",
 		"title",
 		"backBtn",
-		"box" ],
+		"box",
+		"timeStamp",
+		"dateStamp" ],
 	"name" : "PopUp",
 	"pools" : [
 		 ],

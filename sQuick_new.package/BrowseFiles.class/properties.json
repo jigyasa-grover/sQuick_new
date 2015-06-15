@@ -13,7 +13,9 @@
 		"browse",
 		"browseHdr",
 		"box",
-		"interface" ],
+		"interface",
+		"timeStamp",
+		"dateStamp" ],
 	"name" : "BrowseFiles",
 	"pools" : [
 		 ],
