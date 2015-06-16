@@ -17,19 +17,19 @@ initialize
 		
 	searchHdr := TextMorph new.
 	searchHdr newContents: 'Browse Your Files '.
-	searchHdr position: 300@200.
+	searchHdr position: 300@150.
 	searchHdr extent: 175@50.
 	searchHdr font: font .
 	
 	ptm := PluggableTextMorph new.
 	ptm alwaysShowVScrollBar: true.
-	ptm position: 300@250.
+	ptm position: 300@200.
 	ptm extent: 600@300.	
 	txtViewer := ptm textMorph.
 	
 	browse := MenuMorph new.
 	browse stayUp: true.
-	browse position: 50@250.
+	browse position: 50@200.
 	browse extent: 400@1000.	
 	
 	browseHdr := TextMorph new.
@@ -67,13 +67,24 @@ initialize
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
 	timeStamp newContents: d asString .
-	timeStamp position: 100@480.
+	timeStamp position: 300@550.
 	timeStamp  extent: 150@50.
 	dateStamp := TextMorph new.
+	
 	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
 	dateStamp newContents: d asString .
-	dateStamp position: 100@500.
+	dateStamp position: 300@580.
 	dateStamp extent: 150@50.
+	
+	backBtn := SimpleButtonMorph newWithLabel: 'Back'.
+	backBtn color: Color paleTan .
+	backBtn borderColor: Color brown .
+	backBtn borderWidth: 3.
+	backBtn helpText: 'BACK'.
+	backBtn roundedCorners: 4 .
+	backBtn position: 800@550.
+	backBtn extent: 100@50.
+	backBtn on: #click send: #value to: [BrowseFiles delete . IndexInterface open].
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').
 	box extent: (World extent ).
@@ -81,6 +92,7 @@ initialize
 	box addMorph: searchHdr .
 	box addMorph: timeStamp .
 	box addMorph: dateStamp .
+	box addMorph: backBtn .
 	box addMorph: ptm.
 	box addMorph: browse .
 	box openInWindow .

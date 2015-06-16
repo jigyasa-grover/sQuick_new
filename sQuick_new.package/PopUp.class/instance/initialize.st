@@ -24,7 +24,7 @@ initialize
 	backBtn color: Color paleTan .
 	backBtn borderColor: Color brown .
 	backBtn borderWidth: 3.
-	backBtn helpText: 'How to use sQuick'.
+	backBtn helpText: 'BACK'.
 	backBtn roundedCorners: 4 .
 	backBtn position: 300@400.
 	backBtn extent: 100@50.

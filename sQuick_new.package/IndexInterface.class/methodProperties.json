@@ -1,8 +1,11 @@
 {
 	"class" : {
-		"open" : "jig 6/9/2015 15:13:21",
-		"restart" : "jigyasagrover 6/14/2015 14:00" },
+		"delete" : "jigyasagrover 6/16/2015 12:59",
+		"instance" : "jigyasagrover 6/16/2015 12:58",
+		"open" : "jigyasagrover 6/16/2015 12:59",
+		"restart" : "jigyasagrover 6/14/2015 14:00",
+		"run" : "jigyasagrover 6/16/2015 13:00" },
 	"instance" : {
 		"delete" : "jig 6/9/2015 15:13:21",
-		"initialize" : "jigyasagrover 6/15/2015 18:48",
+		"initialize" : "jigyasagrover 6/16/2015 20:51",
 		"pop" : "jigyasagrover 6/14/2015 14:07" } }

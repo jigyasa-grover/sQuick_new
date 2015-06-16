@@ -1,7 +1,7 @@
 {
 	"category" : "sQuick_new-UI",
 	"classinstvars" : [
-		 ],
+		"instance" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "<historical>",
@@ -15,7 +15,9 @@
 		"box",
 		"browseBtn",
 		"timeStamp",
-		"dateStamp" ],
+		"dateStamp",
+		"browseOptn",
+		"codeLink" ],
 	"name" : "IndexInterface",
 	"pools" : [
 		 ],

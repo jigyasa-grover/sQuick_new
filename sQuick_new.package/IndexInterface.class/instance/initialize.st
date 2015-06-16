@@ -15,14 +15,33 @@ initialize
 	header := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_header.gif').
 	header position: 0@0.
 		
+	browseOptn := TextMorph new.
+	browseOptn newContents: 'Current files'.
+	browseOptn position: 75@150.
+	browseOptn extent: 100@50.
+	
+	browseBtn := SimpleButtonMorph newWithLabel: 'Browse Files'.
+	browseBtn color: Color paleTan .
+	browseBtn borderColor: Color brown .
+	browseBtn borderWidth: 3.
+	browseBtn helpText: 'Click to search'.
+	browseBtn roundedCorners: 4 .
+	browseBtn position: 75@200.
+	browseBtn extent: 100@50.
+	browseBtn on: #click send: #value to: [IndexInterface delete .BrowseFiles open].
+	
 	"searchFor := TextMorphForEditView new."
 	searchFor := PluggableTextFieldMorph new.
+	"searchFor := PluggableTextMorph new."
 	searchFor position: 300@130.
 	searchFor height: 30.
 	searchFor width: 450.
+	searchFor ghostText: 'Type the search string ...'.
+	"searchFor acceptTextInModel ."
 	"searchFor newContents: 'Type the search string ...'."
 	searchFor borderWidth: 1.
-	"searchFor backgroundColor: Color white."
+	"searchFor on: self text: [ searchFor text ] accept: [ BrowseFiles open] ."
+	"searchFor on: self text: #getter accept: [BrowseFiles open]."
 	
 	srchBtn := SimpleButtonMorph newWithLabel: 'Search'.
 	srchBtn color: Color paleTan .
@@ -32,29 +51,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [self pop].
-	
-	browseBtn := SimpleButtonMorph newWithLabel: 'Browse Files'.
-	browseBtn color: Color paleTan .
-	browseBtn borderColor: Color brown .
-	browseBtn borderWidth: 3.
-	browseBtn helpText: 'Click to search'.
-	browseBtn roundedCorners: 4 .
-	browseBtn position: 800@300.
-	browseBtn extent: 100@50.
-	browseBtn on: #click send: #value to: [BrowseFiles open].
-		
-			
-	timeStamp := TextMorph new.
-	d := DateAndTime now asTime.
-	timeStamp newContents: d asString .
-	timeStamp position: 100@480.
-	timeStamp  extent: 150@50.
-	dateStamp := TextMorph new.
-	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
-	dateStamp newContents: d asString .
-	dateStamp position: 100@500.
-	dateStamp extent: 150@50.	
+	srchBtn on: #click send: #value to: [self pop].	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
@@ -80,20 +77,38 @@ initialize
 	feedBtn borderWidth: 3.
 	feedBtn helpText: 'Feedback'.
 	feedBtn roundedCorners: 4 .
-	feedBtn position: 780@400.
+	feedBtn position: 800@400.
 	feedBtn extent: 100@50.
+				
+	timeStamp := TextMorph new.
+	d := DateAndTime now asTime.
+	timeStamp newContents: d asString .
+	timeStamp position: 300@500.
+	timeStamp  extent: 150@50.
 	
+	dateStamp := TextMorph new.
+	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
+	dateStamp newContents: d asString .
+	dateStamp position: 300@530.
+	dateStamp extent: 150@50.
+	
+	codeLink := TextMorph new.
+	codeLink newContents: 'Code Repository:'.
+	codeLink position: 650@500.
+	codeLink extent: 200@50.
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_bg.gif').
 	box extent: 200@200.
 	box addMorph: header.
 	box addMorph: searchFor .
 	box addMorph: srchBtn.
+	box addMorph: browseOptn .
 	box addMorph: browseBtn.
-	box addMorph: dateStamp.
-	box addMorph: timeStamp.
 	box addMorph: helpBtn .
 	box addMorph: aboutBtn.
 	box addMorph: feedBtn .
+	box addMorph: dateStamp.
+	box addMorph: timeStamp.
+	box addMorph: codeLink .
 	box openInWindowLabeled: 'sQuick'.
 	
