@@ -1,6 +1,6 @@
 # sQuick_new
 
-![Oops!](https://github.com/jig08/sQuick_new/sQuick_new/resources/header.png "searchQuick")
+![Oops!](https://raw.github.com/jig08/sQuick_new/sQuick_new/resources/header.png)
 
 - The intended “searchQuick” (sQuick) is an application to enable a user to search a set of books or texts, like an encyclopaedia, or some other topical book collection offline.
 
