@@ -4,7 +4,7 @@
 
 - The project can be directly loaded via the Configuration Browser in Pharo 4.0
 
-- World > Tools > Configuration Browser > sQuick_new(jigyasa)
+- World > Tools > Configuration Browser > sQuick_new(jigyasagrover)
 
 
 # Current Status
