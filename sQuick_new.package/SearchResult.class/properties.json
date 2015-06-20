@@ -1,0 +1,14 @@
+{
+	"category" : "sQuick_new-searchFunc",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "SearchResult",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

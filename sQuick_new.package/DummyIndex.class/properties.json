@@ -1,0 +1,15 @@
+{
+	"category" : "sQuick_new-searchFunc",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"indexer",
+		"index" ],
+	"name" : "DummyIndex",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

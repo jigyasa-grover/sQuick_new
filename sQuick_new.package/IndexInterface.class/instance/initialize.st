@@ -31,7 +31,7 @@ initialize
 	browseBtn on: #click send: #value to: [IndexInterface delete .BrowseFiles open].
 	
 	"searchFor := TextMorphForEditView new."
-	searchFor := PluggableTextFieldMorph new.
+	searchFor := PluggableTextFieldMorph new. "on: self text: [ #getter ] accept: [#setter]."
 	"searchFor := PluggableTextMorph new."
 	searchFor position: 300@130.
 	searchFor height: 30.
