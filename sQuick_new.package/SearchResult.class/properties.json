@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		 ],
+		"result",
+		"query" ],
 	"name" : "SearchResult",
 	"pools" : [
 		 ],

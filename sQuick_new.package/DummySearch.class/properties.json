@@ -10,5 +10,5 @@
 	"name" : "DummySearch",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }
