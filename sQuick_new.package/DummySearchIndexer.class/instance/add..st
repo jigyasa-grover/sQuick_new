@@ -1,3 +1,5 @@
 as yet unclassified
 add: aDocument
-	index at: aDocument put: aDocument asString.
+	"|tokens|
+	tokens := ' ' split:aDocument contents."
+	index at: aDocument put: {aDocument title  . aDocument content }.
