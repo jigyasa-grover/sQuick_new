@@ -1,9 +1,9 @@
 as yet unclassified
 documentX
 	| resourceFolder |
-	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
+	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'/'document'.
 	
-		Document new
+		(resourceFolder ) allFiles Document new
 			openWithFileName: 'File 1';
 			title: 'File 1' basenameWithoutExtension .
 		
