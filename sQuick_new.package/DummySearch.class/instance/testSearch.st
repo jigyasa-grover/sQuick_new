@@ -1,9 +1,10 @@
 as yet unclassified
 testSearch
-	| searchFacade searchFor  |	
+	| searchFacade searchFor myDoc|	
 	searchFacade := self searchFacadeClass new.	
-	searchFacade index: self document1.	
+	myDoc := self documentX .
+	searchFacade index: myDoc .
 	searchFor := searchFacade search: 'of' .
-	self assert:(searchFor includes:(self document1 )).
+	self assert:(searchFor includes: myDoc  ).
 	
 	
