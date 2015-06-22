@@ -6,5 +6,4 @@ testSearch4
 	searchFacade index: myDoc .
 	searchFor := searchFacade search: 'of' .
 	self assert:(searchFor includes: myDoc  ).
-	self halt.
 	

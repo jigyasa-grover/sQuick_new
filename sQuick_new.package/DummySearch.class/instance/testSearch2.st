@@ -4,7 +4,7 @@ testSearch2
 	searchFacade := self searchFacadeClass new.	
 	myDoc := self document1 .
 	searchFacade index: myDoc .
-	searchFor := searchFacade search: 'files' .
+	searchFor := searchFacade search: 'file' .
 	self assert:(searchFor includes: myDoc  ).
 	
 	
