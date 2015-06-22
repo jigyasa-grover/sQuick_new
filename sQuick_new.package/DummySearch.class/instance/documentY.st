@@ -1,11 +1,13 @@
 as yet unclassified
-documentX
+documentY
+	
 	| resourceFolder |
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'/'document'.
 	
+		(resourceFolder) allFiles sort do: [ :f |
 		Document new
-			openWithFileName: 'File 1';
-			title: 'File 1' "basenameWithoutExtension" .
+			openWithFile: f;
+			title: f basenameWithoutExtension ].
 		
 		Chapter allSubInstances size > 0 ifTrue: [
 		1 to: (Chapter allSubInstances size) do: [ :index |
