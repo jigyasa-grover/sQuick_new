@@ -5,7 +5,7 @@ testSearch4
 	myDoc := self indexFiles .
 	myDoc do: [:d |
 		searchFacade index: d.
-		searchFor := searchFacade search: 'Contents' .
+		searchFor := searchFacade search: 'of' .
 		self assert:(searchFor includes: d  ).
 		  ].
 	self halt.
