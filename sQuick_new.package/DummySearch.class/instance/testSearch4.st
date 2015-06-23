@@ -3,7 +3,9 @@ testSearch4
 	| searchFacade searchFor myDoc|	
 	searchFacade := self searchFacadeClass new.	
 	myDoc := self indexFiles .
-	searchFacade index: myDoc .
-	searchFor := searchFacade search: 'of' .
-	self assert:(searchFor includes: myDoc  ).
+	myDoc do: [:d |
+		searchFacade index: d.
+		searchFor := searchFacade search: 'of' .
+		self assert:(searchFor includes: d  ).
+		  ].
 	self halt.
