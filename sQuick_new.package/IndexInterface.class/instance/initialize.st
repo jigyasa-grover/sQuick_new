@@ -31,13 +31,13 @@ initialize
 	browseBtn on: #click send: #value to: [IndexInterface delete .BrowseFiles open].
 	
 	"searchFor := TextMorphForEditView new."
-	searchFor := PluggableTextFieldMorph new. "on: self text: [ #getText ] accept: [ nil ]."
+	searchFor := PluggableTextFieldMorph on: self text:  [ self halt. ] accept:  nil  .
 	"searchFor := PluggableTextMorph new."
+	searchFor acceptOnCR: true.
 	searchFor position: 300@130.
 	searchFor height: 30.
 	searchFor width: 450.
 	searchFor ghostText: 'Type the search string ...'.
-	searchFor acceptTextInModel.
 	searchFor borderWidth: 1.
 	
 	srchBtn := SimpleButtonMorph newWithLabel: 'Search'.
@@ -107,4 +107,4 @@ initialize
 	box addMorph: dateStamp.
 	box addMorph: timeStamp.
 	box addMorph: codeLink .
-	box openInWindowLabeled: 'sQuick'.
+	box openInWindowLabeled: 'sQuick'. 
