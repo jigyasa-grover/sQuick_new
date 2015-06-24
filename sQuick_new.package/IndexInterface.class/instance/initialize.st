@@ -4,6 +4,7 @@ initialize
 	| font resourceFolder d |
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
+
 	
 	StandardFonts listFont: font .
 	StandardFonts menuFont: font.
@@ -28,11 +29,10 @@ initialize
 	browseBtn roundedCorners: 4 .
 	browseBtn position: 75@200.
 	browseBtn extent: 100@50.
-	browseBtn on: #click send: #value to: [IndexInterface delete . BrowseFiles open].
+	browseBtn on: #click send: #value to: [IndexInterface delete. BrowseFiles open].
 	
-	"searchFor := TextMorphForEditView new."
-	searchFor := PluggableTextFieldMorph on: self text: nil  accept: [ PopUp open. ]  .
-	"searchFor := PluggableTextMorph new."
+	searchFor := PluggableTextFieldMorph new.
+	"searchFor := PluggableTextFieldMorph  on: self text: searchFor getText asString  accept: [ PopUp open. ]  ."
 	searchFor acceptOnCR: true.
 	searchFor position: 300@130.
 	searchFor height: 30.
@@ -48,7 +48,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [self pop].	
+	srchBtn on: #click send: #value to: [ IndexInterface delete . PopUp open.].	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
@@ -92,7 +92,7 @@ initialize
 	codeLink := TextMorph new.
 	codeLink newContents: 'Code Repository:'.
 	codeLink position: 650@500.
-	codeLink extent: 200@50.
+	codeLink extent: 200@50.	
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_bg.gif').
 	box extent: 200@200.
@@ -107,4 +107,4 @@ initialize
 	box addMorph: dateStamp.
 	box addMorph: timeStamp.
 	box addMorph: codeLink .
-	box openInWindowLabeled: 'sQuick'. 
+	box openInWindowLabeled: 'sQuick'.

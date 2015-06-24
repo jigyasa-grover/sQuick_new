@@ -17,7 +17,8 @@
 		"timeStamp",
 		"dateStamp",
 		"browseOptn",
-		"codeLink" ],
+		"codeLink",
+		"boxWindow" ],
 	"name" : "IndexInterface",
 	"pools" : [
 		 ],

@@ -7,5 +7,5 @@ delete
 	txtViewer := nil.
 	ptm := nil.
 	Smalltalk garbageCollect.
-	box isNil ifFalse: [ box delete].
+	box isNil ifFalse: [ box window close. box delete].
 	box := nil.

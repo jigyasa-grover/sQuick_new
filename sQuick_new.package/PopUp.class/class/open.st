@@ -1,3 +1,4 @@
 as yet unclassified
 open
-self new.
+self delete .
+self run.

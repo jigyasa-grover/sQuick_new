@@ -28,7 +28,7 @@ initialize
 	backBtn roundedCorners: 4 .
 	backBtn position: 300@400.
 	backBtn extent: 100@50.
-	backBtn on: #click send: #value to: [IndexInterface open].
+	backBtn on: #click send: #value to: [ PopUp delete. IndexInterface open].
 	
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.

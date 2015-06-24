@@ -1,6 +1,6 @@
 as yet unclassified
 initialize
-
+	
 	| font resourceFolder d|
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
