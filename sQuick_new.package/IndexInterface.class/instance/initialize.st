@@ -28,10 +28,10 @@ initialize
 	browseBtn roundedCorners: 4 .
 	browseBtn position: 75@200.
 	browseBtn extent: 100@50.
-	browseBtn on: #click send: #value to: [IndexInterface delete .BrowseFiles open].
+	browseBtn on: #click send: #value to: [IndexInterface delete . BrowseFiles open].
 	
 	"searchFor := TextMorphForEditView new."
-	searchFor := PluggableTextFieldMorph on: self text:  [ self halt. ] accept:  nil  .
+	searchFor := PluggableTextFieldMorph on: self text: searchFor getText  accept: [ PopUp open. ]  .
 	"searchFor := PluggableTextMorph new."
 	searchFor acceptOnCR: true.
 	searchFor position: 300@130.
