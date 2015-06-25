@@ -16,7 +16,7 @@ initialize
 	header position: 0@0.
 	
 	title := TextMorph new.
-	title newContents: IndexInterface myString asString . "'Searching....'."
+	title newContents: 'Searching....'.
 	title position: 100@100.
 	title extent: 100@100.
 	
