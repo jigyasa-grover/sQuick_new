@@ -32,7 +32,7 @@ initialize
 	browseBtn on: #click send: #value to: [IndexInterface delete. BrowseFiles open].
 	
 	searchFor := PluggableTextFieldMorph new.
-	"searchFor := PluggableTextFieldMorph  on: self text: searchFor getText asString  accept: [ PopUp open. ]  ."
+	searchFor := PluggableTextFieldMorph  on: self text: myString  accept: myString .
 	searchFor acceptOnCR: true.
 	searchFor position: 300@130.
 	searchFor height: 30.
