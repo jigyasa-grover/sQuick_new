@@ -33,7 +33,7 @@ initialize
 	
 	popUp := PopUp basicNew.
 	
-	searchFor := PluggableTextFieldMorph  on: popUp text: #myString  accept: #myString .
+	searchFor := PluggableTextFieldMorph  on: popUp text: #myString  accept: #myString: .
 	searchFor acceptOnCR: true.
 	searchFor position: 300@130.
 	searchFor height: 30.
@@ -49,7 +49,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. self halt. ].	
+	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. popUp inspect. ].	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
