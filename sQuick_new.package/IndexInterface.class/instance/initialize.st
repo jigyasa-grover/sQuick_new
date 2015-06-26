@@ -1,7 +1,7 @@
 as yet unclassified
 initialize
 
-	| font resourceFolder d popUp|
+	| font resourceFolder d popUp sQ|
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
 
@@ -41,6 +41,8 @@ initialize
 	searchFor ghostText: 'Type the search string ...'.
 	searchFor borderWidth: 1.
 	
+	sQ := SearchQuick new.
+	
 	srchBtn := SimpleButtonMorph newWithLabel: 'Search'.
 	srchBtn color: Color paleTan .
 	srchBtn borderColor: Color brown .
@@ -49,7 +51,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. popUp inspect. ].	
+	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. sQ searchQuick: myString. sQ inspect.].	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
