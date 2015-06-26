@@ -49,7 +49,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [ self halt . IndexInterface delete . popUp open.].	
+	srchBtn on: #click send: #value to: [ IndexInterface delete . popUp open. self halt. ].	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
