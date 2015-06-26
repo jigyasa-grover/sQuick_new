@@ -11,7 +11,8 @@
 		"backBtn",
 		"box",
 		"timeStamp",
-		"dateStamp" ],
+		"dateStamp",
+		"myString" ],
 	"name" : "PopUp",
 	"pools" : [
 		 ],

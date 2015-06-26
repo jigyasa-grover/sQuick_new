@@ -1,7 +1,7 @@
 as yet unclassified
 initialize
 
-	| font resourceFolder d |
+	| font resourceFolder d popUp|
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
 
@@ -31,7 +31,9 @@ initialize
 	browseBtn extent: 100@50.
 	browseBtn on: #click send: #value to: [IndexInterface delete. BrowseFiles open].
 	
-	searchFor := PluggableTextFieldMorph  on: self text: #myString  accept: #myString .
+	popUp := PopUp new.
+	
+	searchFor := PluggableTextFieldMorph  on: popUp text: #myString  accept: #myString .
 	searchFor acceptOnCR: true.
 	searchFor position: 300@130.
 	searchFor height: 30.
@@ -47,7 +49,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [ self halt. IndexInterface delete . PopUp open.].	
+	srchBtn on: #click send: #value to: [ self halt . IndexInterface delete . popUp open.].	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
