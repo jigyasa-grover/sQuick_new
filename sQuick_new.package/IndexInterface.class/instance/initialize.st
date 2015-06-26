@@ -31,7 +31,7 @@ initialize
 	browseBtn extent: 100@50.
 	browseBtn on: #click send: #value to: [IndexInterface delete. BrowseFiles open].
 	
-	popUp := PopUp new.
+	popUp := PopUp basicNew.
 	
 	searchFor := PluggableTextFieldMorph  on: popUp text: #myString  accept: #myString .
 	searchFor acceptOnCR: true.
@@ -49,7 +49,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [ IndexInterface delete . popUp open. self halt. ].	
+	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. self halt. ].	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .

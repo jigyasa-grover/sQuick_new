@@ -1,3 +1,3 @@
 as yet unclassified
 myString: aString	
-	^myString := aString
+	myString := aString asString .
