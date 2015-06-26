@@ -41,7 +41,7 @@ initialize
 	searchFor ghostText: 'Type the search string ...'.
 	searchFor borderWidth: 1.
 	
-	sQ := SearchQuick new.
+	sQ := SearchQuick basicNew .
 	
 	srchBtn := SimpleButtonMorph newWithLabel: 'Search'.
 	srchBtn color: Color paleTan .
@@ -51,7 +51,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. sQ searchQuick: myString. sQ inspect.].	
+	srchBtn on: #click send: #myString: to: [ searchFor accept. IndexInterface delete . popUp open. sQ searchQuick: myString. sQ inspect.].	
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
