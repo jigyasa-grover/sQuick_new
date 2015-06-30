@@ -1,7 +1,7 @@
 as yet unclassified
 initialize
 
-	| font resourceFolder d|
+	| font resourceFolder d sQ |
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
 	
@@ -19,6 +19,15 @@ initialize
 	title newContents: 'Searching....'.
 	title position: 100@100.
 	title extent: 100@100.
+	
+	pos := 120.
+	sQ := SearchQuick new.
+	sQ myResult do: [:r|
+		x := TextMorph new.
+		x position: 100@pos.
+		x content: r first.
+		pos := pos+20.  
+		].
 	
 	backBtn := SimpleButtonMorph newWithLabel: 'Back'.
 	backBtn color: Color paleTan .
@@ -48,5 +57,6 @@ initialize
 	box addMorph: dateStamp .
 	box addMorph: timeStamp .
 	box addMorph: backBtn .
+	box addMorph: x.
 	box openInWindowLabeled: 'sQuick'.
 	

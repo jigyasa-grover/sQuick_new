@@ -12,7 +12,9 @@
 		"box",
 		"timeStamp",
 		"dateStamp",
-		"myString" ],
+		"myString",
+		"x",
+		"pos" ],
 	"name" : "PopUp",
 	"pools" : [
 		 ],

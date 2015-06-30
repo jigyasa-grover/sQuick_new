@@ -51,7 +51,9 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. sQ searchQuick: popUp myString. sQ inspect.].	
+	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. sQ searchQuick: popUp myString. ].
+		
+		"sQ inspect.].	"
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
