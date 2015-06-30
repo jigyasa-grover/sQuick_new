@@ -1,10 +1,8 @@
 as yet unclassified
 openAndPrint
-	|popUp  |
-	popUp := PopUp basicNew .
 	IndexInterface delete . 
-	popUp  open. 
-	SearchQuick searchQuick: popUp  myString. 
+	self open. 
+	SearchQuick searchQuick: self myString. 
 	pos := 120.
 	SearchQuick myResult do: [:r|
 		x := TextMorph new.
