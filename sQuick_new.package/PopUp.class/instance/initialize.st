@@ -1,7 +1,7 @@
 as yet unclassified
 initialize
 
-	| font resourceFolder d sQ |
+	| font resourceFolder d  |
 	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
 	
@@ -21,8 +21,7 @@ initialize
 	title extent: 100@100.
 	
 	pos := 120.
-	sQ := SearchQuick new.
-	sQ myResult do: [:r|
+	SearchQuick myResult do: [:r|
 		x := TextMorph new.
 		x position: 100@pos.
 		x content: r first.

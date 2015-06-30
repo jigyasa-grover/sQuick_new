@@ -1,12 +1,12 @@
 {
 	"category" : "sQuick_new-searchFunc",
 	"classinstvars" : [
-		 ],
+		"myResult" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "JigyasaGrover 6/29/2015 12:38",
 	"instvars" : [
-		"myResult" ],
+		 ],
 	"name" : "SearchQuick",
 	"pools" : [
 		 ],
