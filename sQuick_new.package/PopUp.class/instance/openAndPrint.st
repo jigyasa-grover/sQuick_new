@@ -3,11 +3,11 @@ openAndPrint
 	IndexInterface delete . 
 	self open. 
 	SearchQuick searchQuick: self myString. 
-	pos := 120.
+	pos := 300.
 	SearchQuick myResult do: [:r|
 		x := TextMorph new.
-		x position: 100@pos.
+		x position: 500@(pos).
 		box addMorph: x.
-		x newContents: r asString .
+		x newContents: r title asString .
 		pos := pos+20.  
 		].
