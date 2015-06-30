@@ -20,14 +20,6 @@ initialize
 	title position: 100@100.
 	title extent: 100@100.
 	
-	pos := 120.
-	SearchQuick myResult do: [:r|
-		x := TextMorph new.
-		x position: 100@pos.
-		x content: r first.
-		pos := pos+20.  
-		].
-	
 	backBtn := SimpleButtonMorph newWithLabel: 'Back'.
 	backBtn color: Color paleTan .
 	backBtn borderColor: Color brown .
@@ -56,6 +48,5 @@ initialize
 	box addMorph: dateStamp .
 	box addMorph: timeStamp .
 	box addMorph: backBtn .
-	box addMorph: x.
 	box openInWindowLabeled: 'sQuick'.
 	
