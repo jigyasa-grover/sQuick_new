@@ -9,5 +9,6 @@ openAndPrint
 		x position: 500@(pos).
 		box addMorph: x.
 		x newContents: r title asString .
+		x on: #click send: #value to: [ self printContent: r title ].
 		pos := pos+20.  
 		].
