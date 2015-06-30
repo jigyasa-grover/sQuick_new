@@ -20,6 +20,9 @@ initialize
 	title position: 100@100.
 	title extent: 100@100.
 	
+	fileContents := TextMorph new.
+	fileContents position: 700@500.
+	
 	backBtn := SimpleButtonMorph newWithLabel: 'Back'.
 	backBtn color: Color paleTan .
 	backBtn borderColor: Color brown .

@@ -14,7 +14,8 @@
 		"dateStamp",
 		"myString",
 		"pos",
-		"x" ],
+		"x",
+		"fileContents" ],
 	"name" : "PopUp",
 	"pools" : [
 		 ],
