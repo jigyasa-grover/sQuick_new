@@ -20,9 +20,9 @@ initialize
 	title position: 120@100.
 	title extent: 200@100.
 	
-	searchResults := Morph new.
+	searchResults := PluggableTextMorph new.
 	searchResults position: 300@200.
-	"searchResults alwaysShowVScrollBar: true."
+	searchResults alwaysShowVScrollBar: true.
 	searchResults extent: 200@300.
 	searchResults color: Color paleBlue .
 	
