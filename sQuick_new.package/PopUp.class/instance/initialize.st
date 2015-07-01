@@ -16,12 +16,20 @@ initialize
 	header position: 0@0.
 	
 	title := TextMorph new.
-	title newContents: 'Searching....'.
-	title position: 100@100.
-	title extent: 100@100.
+	title newContents: 'SEARCH RESULTS for "', myString asString, '"' .
+	title position: 120@100.
+	title extent: 200@100.
 	
-	fileContents := TextMorph new.
-	fileContents position: 700@500.
+	searchResults := Morph new.
+	searchResults position: 300@200.
+	"searchResults alwaysShowVScrollBar: true."
+	searchResults extent: 200@300.
+	searchResults color: Color paleBlue .
+	
+	fileContents := PluggableTextMorph new.
+	fileContents position: 600@200.
+	fileContents alwaysShowVScrollBar: true.
+	fileContents extent: 500@300.
 	
 	backBtn := SimpleButtonMorph newWithLabel: 'Back'.
 	backBtn color: Color paleTan .
@@ -29,19 +37,19 @@ initialize
 	backBtn borderWidth: 3.
 	backBtn helpText: 'BACK'.
 	backBtn roundedCorners: 4 .
-	backBtn position: 300@400.
+	backBtn position: 300@600.
 	backBtn extent: 100@50.
 	backBtn on: #click send: #value to: [ PopUp delete. IndexInterface open].
 	
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
 	timeStamp newContents: d asString .
-	timeStamp position: 100@480.
+	timeStamp position: 100@580.
 	timeStamp  extent: 150@50.
 	dateStamp := TextMorph new.
 	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
 	dateStamp newContents: d asString .
-	dateStamp position: 100@500.
+	dateStamp position: 100@600.
 	dateStamp extent: 150@50.
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').
