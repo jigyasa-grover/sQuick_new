@@ -37,19 +37,19 @@ initialize
 	backBtn borderWidth: 3.
 	backBtn helpText: 'BACK'.
 	backBtn roundedCorners: 4 .
-	backBtn position: 300@600.
+	backBtn position: 300@550.
 	backBtn extent: 100@50.
 	backBtn on: #click send: #value to: [ PopUp delete. IndexInterface open].
 	
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
 	timeStamp newContents: d asString .
-	timeStamp position: 100@580.
+	timeStamp position: 100@530.
 	timeStamp  extent: 150@50.
 	dateStamp := TextMorph new.
 	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
 	dateStamp newContents: d asString .
-	dateStamp position: 100@600.
+	dateStamp position: 100@550.
 	dateStamp extent: 150@50.
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').

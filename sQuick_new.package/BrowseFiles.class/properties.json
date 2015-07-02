@@ -16,7 +16,8 @@
 		"interface",
 		"timeStamp",
 		"dateStamp",
-		"backBtn" ],
+		"backBtn",
+		"fileList" ],
 	"name" : "BrowseFiles",
 	"pools" : [
 		 ],

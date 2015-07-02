@@ -27,11 +27,12 @@ initialize
 	ptm extent: 600@300.	
 	txtViewer := ptm textMorph.
 	
-	browse := MenuMorph new.
+	
+	browse := MenuMorph new.	
 	browse stayUp: true.
 	browse position: 50@200.
-	browse extent: 400@1000.	
-	
+	browse extent: 400@1000.
+		
 	browseHdr := TextMorph new.
 	browseHdr newContents: 'Browse'.
 	browseHdr backgroundColor: Color paleBlue .
@@ -94,6 +95,6 @@ initialize
 	box addMorph: dateStamp .
 	box addMorph: backBtn .
 	box addMorph: ptm.
-	box addMorph: browse .
+	box addMorph: browse  .
 	box openInWindow .
 	
