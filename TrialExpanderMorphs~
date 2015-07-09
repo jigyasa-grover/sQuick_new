@@ -1,6 +1,6 @@
 |dialog builder|
 
-	builder := WidgetExamples exampleBuilder.
+	builder := WidgetExamples  exampleBuilder.
 	
 	dialog := (builder newPluggableDialogWindow: 'Example other controls') useDefaultOKButton.
 	
@@ -27,5 +27,4 @@
 				cellInset: 0;
 				borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1))});
 		model: nil.
-
 	builder openModal: dialog
