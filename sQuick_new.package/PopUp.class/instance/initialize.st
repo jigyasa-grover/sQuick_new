@@ -52,6 +52,10 @@ initialize
 	dateStamp position: 100@550.
 	dateStamp extent: 150@50.
 	
+	builder := WidgetExamples exampleBuilder.
+	"builder := Morph new."
+	builder position: 500@300.
+	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').
 	box extent: 200@200.
 	box addMorph: header.
@@ -59,5 +63,6 @@ initialize
 	box addMorph: dateStamp .
 	box addMorph: timeStamp .
 	box addMorph: backBtn .
+	box addMorph: builder.
 	box openInWindowLabeled: 'sQuick'.
 	

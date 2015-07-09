@@ -51,7 +51,7 @@ initialize
 	srchBtn extent: 100@50.
 	"srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. SearchQuick searchQuick: popUp myString. popUp printResult. ]."
 	
-	srchBtn on: #click send: #value to: [searchFor accept . popUp openAndPrint  . ].
+	srchBtn on: #click send: #value to: [searchFor accept . popUp printSearchResults ."popUp openAndPrint  ." ].
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
 	helpBtn color: Color paleTan .
