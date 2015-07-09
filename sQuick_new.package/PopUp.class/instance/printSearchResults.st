@@ -9,19 +9,22 @@ printSearchResults
 	dialog := (builder newPluggableDialogWindow: 'RESULTS').
 	
 	dialog contentMorph:
-	(		
-			SearchQuick myResult do: [:r |
-			dialog newRow: {			
 			(
-					(dialog newExpander: 'r title asString' 
-						forAll: {		dialog newLabel: 'r content asString' .	}
-					)minWidth:600; minHeight: 300																
-			) 
-				cellInset: 0;
-				borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
-							}	
-									]
-		);
-			
-		 model: nil.	
-		 builder openModal: dialog.
+					dialog newColumn:
+ 							(
+								SearchQuick myResult collect: [ :r |
+ 												dialog newRow: {
+ 														(
+ 															(
+																dialog newExpander: r title asString
+ 																forAll: {		dialog newLabel: r content asString .	}
+ 															)minWidth:600; minHeight: 10
+ 														)
+ 																cellInset: 0;
+ 																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
+ 																		} 
+																		]
+							)
+ 			);
+ 	model: nil.
+ 	builder openModal: dialog.
