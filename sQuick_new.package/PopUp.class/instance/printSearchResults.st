@@ -1,6 +1,6 @@
 as yet unclassified
 printSearchResults
-	|dialog|
+	|dialog   |
 
 	IndexInterface delete . 
 	self open. 
@@ -17,7 +17,7 @@ printSearchResults
  														(
  															(
 																dialog newExpander: r title asString
- 																forAll: {		dialog newLabel: r content asString .	}
+ 																forAll: {		dialog newText:  r content asString .	}
  															)minWidth:600; minHeight: 10
  														)
  																cellInset: 0;
