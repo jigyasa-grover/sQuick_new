@@ -17,7 +17,10 @@ printSearchResults
  														(
  															(
 																dialog newExpander: r title asString
- 																forAll: {		dialog newText:  r content asString .	}
+ 																forAll: {		"dialog newText:  r content asString ."	
+																				(dialog newTextEditorFor: (ValueHolder new contents: r content asString )
+																				 getText: #contents setText: #contents:)minHeight: 300.
+																			}
  															)minWidth:600; minHeight: 10
  														)
  																cellInset: 0;
