@@ -20,7 +20,9 @@
 		"searchResult1",
 		"searchResult2",
 		"searchResults",
-		"searchView" ],
+		"searchView",
+		"dialog",
+		"searchResultsAccordion" ],
 	"name" : "PopUp",
 	"pools" : [
 		 ],

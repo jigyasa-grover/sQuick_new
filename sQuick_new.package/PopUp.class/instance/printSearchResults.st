@@ -1,6 +1,5 @@
 as yet unclassified
 printSearchResults
-	|dialog   |
 
 	IndexInterface delete . 
 	self open. 
@@ -8,7 +7,7 @@ printSearchResults
 	"builder := WidgetExamples exampleBuilder."	
 	dialog := (builder newPluggableDialogWindow: 'RESULTS').
 	
-	dialog contentMorph:
+	searchResultsAccordion := dialog contentMorph:
 			(
 					dialog newColumn:
  							(
@@ -21,7 +20,7 @@ printSearchResults
 																				(dialog newTextEditorFor: (ValueHolder new contents: r content asString )
 																				 getText: #contents setText: #contents:)minHeight: 300.
 																			}
- 															)minWidth:600; minHeight: 10
+ 															)minWidth:750; minHeight: 10
  														)
  																cellInset: 0;
  																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
@@ -30,4 +29,8 @@ printSearchResults
 							)
  			);
  	model: nil.
+	
  	builder openModal: dialog.
+	dialog extent: 775@350.
+	dialog position: 500@200.
+	dialog newScrollPaneFor: searchResultsAccordion .
