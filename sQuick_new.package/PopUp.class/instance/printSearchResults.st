@@ -7,7 +7,7 @@ printSearchResults
 	"builder := WidgetExamples exampleBuilder."	
 	dialog := (builder newPluggableDialogWindow: 'RESULTS').
 	
-	searchResultsAccordion := dialog contentMorph:
+	searchResultsAccordion :=  dialog contentMorph:
 			(
 					dialog newColumn:
  							(
@@ -18,7 +18,7 @@ printSearchResults
 																dialog newExpander: r title asString
  																forAll: {		"dialog newText:  r content asString ."	
 																				(dialog newTextEditorFor: (ValueHolder new contents: r content asString )
-																				 getText: #contents setText: #contents:)minHeight: 300.
+																				 getText: #contents setText: #contents:)minHeight: 150.
 																			}
  															)minWidth:750; minHeight: 10
  														)
@@ -29,8 +29,8 @@ printSearchResults
 							)
  			);
  	model: nil.
-	
+      builder newScrollPaneFor: searchResultsAccordion.
  	builder openModal: dialog.
 	dialog extent: 775@350.
 	dialog position: 500@200.
-	dialog newScrollPaneFor: searchResultsAccordion .
+	"dialog newScrollPaneFor: searchResultsAccordion ."
