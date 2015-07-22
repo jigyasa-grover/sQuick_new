@@ -29,7 +29,7 @@ printSearchResults
 																		]
 							).
 							
-					backBtn := dialog newButtonFor: nil action: nil label: 'Back' help: 'Back'.
+					backBtn := dialog newButtonFor: self action: #backButtonClicked label: 'Back' help: 'Back'.
 					backBtn extent: 750@30.
 							}
  			);

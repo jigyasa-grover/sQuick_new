@@ -1,1 +1,55 @@
-(name 'sQuick_new-jigyasa.62' message 'Addition of ''Back'' button in accordion widget, work #4' id '143db354-4b18-45b6-bdc5-4630340eaaf1' date '22 July 2015' time '1:14:38.318956 pm' author 'jigyasa' ancestors ((name 'sQuick_new-jigyasa.61' message 'Removal pop up background, only accordion left. #4' id 'd44b2359-745d-409a-a4d4-9ce454d69089' date '22 July 2015' time '11:49:28.420933 am' author 'jigyasa' ancestors ((name 'sQuick_new-jigyasa.60' message 'empty log message' id '0492cb82-062a-4f59-870c-a50226d3b9fe' date '21 July 2015' time '9:20:22.747476 pm' author 'jigyasa' ancestors () stepChildren ())) stepChildren ())) stepChildren ())
+(name 'sQuick_new-jigyasa.55' message '''Back'' functionality added in Accordion Widget, work #4' id 'cc99626f-48db-4418-886e-93d7e1180c18' date '22 July 2015' time '1:48:05.815822 pm' author 'jigyasa' ancestors ((name 'sQuick_new-jig.54' message 'Addition of ''Back'' button in accordion widget, work #4
+' id '3d7cce61-213b-5a9f-a55f-88cda4ae7a85' date '22 July 2015' time '1:18:03 pm' author 'jig' ancestors ((name 'sQuick_new-jig.53' message 'Removal pop up background, only accordion left. #4
+' id '786ef14a-8330-5221-80c9-56018ea8503f' date '22 July 2015' time '11:52:23 am' author 'jig' ancestors ((name 'sQuick_new-jig.52' message 'empty log message
+' id '54e0d7f8-651e-5f77-9fe8-51745d35a8c6' date '21 July 2015' time '9:20:47 pm' author 'jig' ancestors ((name 'sQuick_new-jig.51' message 'Position & Extent of ''dialog'' resolved.
+' id '1a9d51a5-85b7-5e96-9dfd-a8411c11fc35' date '20 July 2015' time '6:20:54 pm' author 'jig' ancestors ((name 'sQuick_new-jig.50' message 'Scrollable search result content.
+' id '164cc126-cfa5-5b3f-b145-8ce0672eed1f' date '17 July 2015' time '4:56:40 pm' author 'jig' ancestors ((name 'sQuick_new-jig.49' message 'Display of file content.
+' id '6337ec20-2d63-5b52-9b60-f7b20c53b6e2' date '10 July 2015' time '3:20:21 pm' author 'jig' ancestors ((name 'sQuick_new-jig.48' message 'Making of accordion widget.
+' id '7d951c94-927b-581b-b33d-e9811ae3f04d' date '9 July 2015' time '3:25:35 pm' author 'jig' ancestors ((name 'sQuick_new-jig.47' message 'Trying Accordion Widget.
+' id '76a3bcf2-b702-53a5-8cf2-1b9e41c8b45a' date '9 July 2015' time '1:50:56 pm' author 'jig' ancestors ((name 'sQuick_new-jig.46' message 'Mod.
+' id '1a801d92-1e1a-54be-86e0-2295868d4909' date '2 July 2015' time '2:02:23 pm' author 'jig' ancestors ((name 'sQuick_new-jig.45' message 'search result list.
+' id 'd6736add-ddbd-5ab0-94a4-5f298f22fa3c' date '1 July 2015' time '7:38:23 pm' author 'jig' ancestors ((name 'sQuick_new-jig.44' message 'adding search result list.
+' id '929cc339-ad0b-515c-b09b-2e9a0f007d7b' date '1 July 2015' time '3:49:36 pm' author 'jig' ancestors ((name 'sQuick_new-jig.43' message 'Search Rsults Printed.
+' id '21be4e20-729a-545c-9265-1fef296f798d' date '30 June 2015' time '7:41:17 pm' author 'jig' ancestors ((name 'sQuick_new-jig.42' message 'Print Content.
+' id '42c56589-7832-5f59-8c4f-dd21e9257668' date '30 June 2015' time '5:20:26 pm' author 'jig' ancestors ((name 'sQuick_new-jig.41' message 'Search Results Printed.
+' id '95218e30-8789-51c5-a8eb-742694754082' date '30 June 2015' time '4:25:58 pm' author 'jig' ancestors ((name 'sQuick_new-jig.40' message 'test print
+' id 'a345f420-0b0d-578f-a513-04d38664b3dc' date '30 June 2015' time '4:00:03 pm' author 'jig' ancestors ((name 'sQuick_new-jig.39' message 'print
+' id '075a1f6e-9cbf-5c6f-a55b-3649e1ab1354' date '30 June 2015' time '3:19:38 pm' author 'jig' ancestors ((name 'sQuick_new-jig.38' message 'print results
+' id '96330cdb-3427-5953-97a8-88905b70e074' date '30 June 2015' time '2:51:27 pm' author 'jig' ancestors ((name 'sQuick_new-jig.37' message 'print result
+' id '33adeda2-1f9b-5326-b10f-0ce8fd4724d1' date '30 June 2015' time '2:25:46 pm' author 'jig' ancestors ((name 'sQuick_new-jig.36' message 'Printing Result.
+' id 'dc35b1ce-f35d-558c-822a-f29e8af440e6' date '30 June 2015' time '1:12 pm' author 'jig' ancestors ((name 'sQuick_new-jig.35' message 'Adding Class Comments.
+' id '5cb96e5e-6b20-5d38-8476-41ba4184144d' date '29 June 2015' time '12:45:12 pm' author 'jig' ancestors ((name 'sQuick_new-jig.34' message 'User Input String passing done.
+' id '3dbc8f54-7a98-5880-8514-ed7f2b887673' date '26 June 2015' time '8:19:27 pm' author 'jig' ancestors ((name 'sQuick_new-jig.33' message 'Integrate Func with UI.
+' id 'bbceacf8-d620-5c85-ae03-bcd877169501' date '26 June 2015' time '5:34:40 pm' author 'jig' ancestors ((name 'sQuick_new-jig.32' message 'sQuick trial.
+' id '288181bf-d171-583b-a269-0af2df6d07c6' date '26 June 2015' time '5:28:18 pm' author 'jig' ancestors ((name 'sQuick_new-jig.31' message 'User Input string retreived.
+' id 'f6f89e1d-99ea-5c5f-822b-df0ed371d7ce' date '26 June 2015' time '3:23:22 pm' author 'jig' ancestors ((name 'sQuick_new-jig.30' message 'myString check.
+' id '880c5db8-e748-53de-9c95-1940592889c4' date '26 June 2015' time '12:53:46 pm' author 'jig' ancestors ((name 'sQuick_new-jig.29' message 'myString check.
+' id '683163ac-08f3-5b7f-9991-4342ec27658e' date '26 June 2015' time '12:25:57 pm' author 'jig' ancestors ((name 'sQuick_new-jig.28' message 'Changes to myString.
+' id '7b9ba664-1eb9-52ea-92c8-35172caca1c6' date '26 June 2015' time '12:06:47 pm' author 'jig' ancestors ((name 'sQuick_new-jig.27' message 'Check myString.
+' id '28534513-3944-50c0-909a-346a8bfc8cd6' date '25 June 2015' time '8:30:01 pm' author 'jig' ancestors ((name 'sQuick_new-jig.26' message 'Checking myString.
+' id 'e53cc7f0-e1b5-5e8f-a1b3-919ae812b588' date '25 June 2015' time '8:18:53 pm' author 'jig' ancestors ((name 'sQuick_new-jig.25' message 'Old Windows Close.
+' id 'faea717b-fc18-555d-be34-1d6c1b184d3d' date '24 June 2015' time '11:23:04 pm' author 'jig' ancestors ((name 'sQuick_new-jig.24' message 'Latest June 24.
+' id 'bcfd1183-7437-5b76-affc-b714c86ed041' date '24 June 2015' time '9:42:07 pm' author 'jig' ancestors ((name 'sQuick_new-jig.23' message 'Enter.
+' id '0cbfde9d-9c29-5fea-b8d0-cd43419d9620' date '24 June 2015' time '5:16:47 pm' author 'jig' ancestors ((name 'sQuick_new-jig.22' message 'ENTER press solved.
+' id '58659a02-c839-50fc-b01f-b69a58e8eb12' date '24 June 2015' time '4:42:39 pm' author 'jig' ancestors ((name 'sQuick_new-jig.21' message 'All files indexed.
+' id '5f8092f6-f580-5e74-a682-16f173178583' date '23 June 2015' time '9:39:07 pm' author 'jig' ancestors ((name 'sQuick_new-jig.20' message 'All files indexed.
+' id '86ee6d67-d831-5508-91a0-d3b75c40de6e' date '23 June 2015' time '9:35:40 pm' author 'jig' ancestors ((name 'sQuick_new-jig.19' message 'All Files Indexed.
+' id 'd1d96c5a-a87f-523f-b7e0-2786f5674056' date '23 June 2015' time '9:07:22 pm' author 'jig' ancestors ((name 'sQuick_new-jig.18' message 'All files Indexed.
+' id '81e692b5-d075-54cf-80c0-1d6c2324ce3b' date '23 June 2015' time '8:54:10 pm' author 'jig' ancestors ((name 'sQuick_new-jig.17' message 'All files indexed.
+' id 'aaa61dd1-7da0-52f3-9233-1ff20898b590' date '23 June 2015' time '8:30:45 pm' author 'jig' ancestors ((name 'sQuick_new-jig.16' message 'IndexingAllFiles.
+' id 'd8762b95-5e6b-53d2-a5be-0cb0586a4237' date '23 June 2015' time '7:50:09 pm' author 'jig' ancestors ((name 'sQuick_new-jig.15' message 'Tests for check.
+' id '83e5b2bc-fa96-5619-ac8b-1327c3dc5bfb' date '22 June 2015' time '8:37:26 pm' author 'jig' ancestors ((name 'sQuick_new-jig.14' message 'Different Tests for Index.
+' id '1ce86e01-ad4b-5eb7-acc3-4476002ebccd' date '22 June 2015' time '5:32:26 pm' author 'jig' ancestors ((name 'sQuick_new-jig.13' message 'Different tests for Dummy Search.
+' id '2c55ed8a-3780-5089-bc34-09b142997192' date '22 June 2015' time '3:58:16 pm' author 'jig' ancestors ((name 'sQuick_new-jig.12' message 'Open Files for indexing
+' id 'cac2ad0a-0363-54b7-bdcb-524bc859f68c' date '22 June 2015' time '3:40:32 pm' author 'jig' ancestors ((name 'sQuick_new-jig.11' message 'Opening files for indexing
+' id '5acf5663-c379-591a-bc4a-eb92213a35a9' date '22 June 2015' time '3:01:45 pm' author 'jig' ancestors ((name 'sQuick_new-jig.10' message 'Dummy Index Modification.
+' id '3dec3f0f-a375-5ed2-a9b6-af97f8eb64f5' date '22 June 2015' time '1:53:57 pm' author 'jig' ancestors ((name 'sQuick_new-jig.9' message 'Dummy Index Modification.
+' id '4645f5d8-8af4-5b30-baf2-8f4cd1383e8e' date '21 June 2015' time '11:17 pm' author 'jig' ancestors ((name 'sQuick_new-jig.8' message 'Modifying DummyIndex.
+' id '2f01a809-872b-585a-b609-1ffcca3e30e4' date '21 June 2015' time '9:41:06 pm' author 'jig' ancestors ((name 'sQuick_new-jig.7' message 'DummySearch test run successful.
+' id '3480cb80-78b9-5839-8d4f-5a292d2a0897' date '20 June 2015' time '9:15:47 pm' author 'jig' ancestors ((name 'sQuick_new-jig.6' message 'Dummy Index build.
+' id '3682e377-52c2-51dd-bf25-1840de27a107' date '20 June 2015' time '8:51:19 pm' author 'jig' ancestors ((name 'sQuick_new-jig.5' message 'Morph re-positioning. Back button implementation.
+' id 'fedec497-7b73-54b7-a02d-c6794ac86989' date '16 June 2015' time '8:59:59 pm' author 'jig' ancestors ((name 'sQuick_new-jig.4' message 'Error resolved of Nil Receiver.
+' id '65b8b61f-3a28-591c-873c-3268aedf0f47' date '15 June 2015' time '8:57:55 pm' author 'jig' ancestors ((name 'sQuick_new-jig.3' message 'Image Scaling.
+' id '69276a30-5bbd-546d-87b9-937d26e3e588' date '15 June 2015' time '7:08:06 pm' author 'jig' ancestors ((name 'sQuick_new-jig.2' message 'Different Views
+' id '4a892354-303d-5097-93bb-3e190285b300' date '14 June 2015' time '6:56:01 pm' author 'jig' ancestors ((name 'sQuick_new-jig.1' message 'IndexInterface
+' id '5ba02ab7-a87d-5b13-adf8-6f93e246222a' date '9 June 2015' time '3:13:21 pm' author 'jig' ancestors () stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())(id 'fedec497-7b73-54b7-a02d-c6794ac86989')) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())(id 'd6736add-ddbd-5ab0-94a4-5f298f22fa3c')) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())
