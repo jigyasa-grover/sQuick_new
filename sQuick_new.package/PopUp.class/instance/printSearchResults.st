@@ -9,7 +9,8 @@ printSearchResults
 	
 	searchResultsAccordion :=  dialog contentMorph:
 			(
-					dialog newColumn:
+				dialog newColumn: { 
+					dialog newColumn: 
  							(
 								SearchQuick myResult collect: [ :r |
  												dialog newRow: {
@@ -26,7 +27,11 @@ printSearchResults
  																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
  																		} 
 																		]
-							)
+							).
+							
+					backBtn := dialog newButtonFor: nil action: nil label: 'Back' help: 'Back'.
+					backBtn extent: 750@30.
+							}
  			);
  	model: nil.
       builder newScrollPaneFor: searchResultsAccordion.
