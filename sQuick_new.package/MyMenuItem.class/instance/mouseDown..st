@@ -1,4 +1,4 @@
-as yet unclassified
+events
 mouseDown: ev
 	BrowseFiles instance heading contents: (chapter title ).
 	BrowseFiles instance content contents: (chapter content ).

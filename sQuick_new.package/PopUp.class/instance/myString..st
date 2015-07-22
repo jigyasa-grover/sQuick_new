@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 myString: aString	
 	myString := aString asString .

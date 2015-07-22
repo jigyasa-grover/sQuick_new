@@ -1,4 +1,4 @@
-as yet unclassified
+adding
 add: aDocument
 	^indexer add: aDocument .
 	"tokens := ' ' split: aDocument .

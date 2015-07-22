@@ -1,4 +1,4 @@
-as yet unclassified
+initialization
 initialize
 
 	"backBtn on: #click send: #value to: [ PopUp delete. IndexInterface open]."

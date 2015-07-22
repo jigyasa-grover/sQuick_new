@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testSearch3
 	| searchFacade searchFor myDoc|	
 	searchFacade := self searchFacadeClass new.	

@@ -1,4 +1,4 @@
-as yet unclassified
+adding
 add: aDocument
 	"|tokens|
 	tokens := ' ' split:aDocument contents."

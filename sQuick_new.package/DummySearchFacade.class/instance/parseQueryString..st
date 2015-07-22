@@ -1,3 +1,3 @@
-as yet unclassified
+parsing
 parseQueryString: aString
 	^ StringSearchQuery string: aString

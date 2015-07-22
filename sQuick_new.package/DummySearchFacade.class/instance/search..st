@@ -1,3 +1,3 @@
-as yet unclassified
+typing/selecting keys
 search: aString
 	^index queryFor: (self parseQueryString: aString).

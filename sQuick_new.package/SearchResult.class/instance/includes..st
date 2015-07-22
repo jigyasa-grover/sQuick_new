@@ -1,3 +1,3 @@
-as yet unclassified
+testing
 includes: aDocument
 	^result includes: aDocument.

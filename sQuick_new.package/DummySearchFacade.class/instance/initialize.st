@@ -1,3 +1,3 @@
-as yet unclassified
+initialization
 initialize
 	index := self newIndex

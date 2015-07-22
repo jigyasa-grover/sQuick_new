@@ -1,4 +1,4 @@
-as yet unclassified
+submorphs-add/remove
 delete
 	MyMenuItem clear.
 	Chapter clear.

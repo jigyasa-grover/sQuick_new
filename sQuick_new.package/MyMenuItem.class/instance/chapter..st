@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 chapter: c
 	chapter := c.
 	self contents: chapter title.

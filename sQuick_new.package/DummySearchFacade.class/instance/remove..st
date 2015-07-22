@@ -1,3 +1,3 @@
-as yet unclassified
+removing
 remove: aDocument
 	^index remove: aDocument
