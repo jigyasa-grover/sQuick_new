@@ -31,6 +31,4 @@ printSearchResults
  	model: nil.
       builder newScrollPaneFor: searchResultsAccordion.
  	builder openModal: dialog.
-	dialog extent: 775@350.
-	dialog position: 500@200.
 	"dialog newScrollPaneFor: searchResultsAccordion ."
