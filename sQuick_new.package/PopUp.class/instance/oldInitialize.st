@@ -1,9 +1,15 @@
 as yet unclassified
 oldInitialize
 
-	| font resourceFolder d  |
-	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
+	| font resourceFolder resourcePath d |
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
+	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
+	
+	MCGitHubRepository allSubInstancesDo: 
+									[ :repo |
+										 repo projectPath = 'jig08/sQuick_new'  ifTrue: [ resourcePath := repo directory ] 
+									]. 
+	resourceFolder  := resourcePath / 'sQuick_new/resources'.
 	
 	StandardFonts listFont: font .
 	StandardFonts menuFont: font.

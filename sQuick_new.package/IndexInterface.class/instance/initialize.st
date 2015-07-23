@@ -1,9 +1,15 @@
 initialization
 initialize
-
-	| font resourceFolder d popUp|
-	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'.
+	
+	| font resourceFolder resourcePath d popUp|
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
+	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
+	
+	MCGitHubRepository allSubInstancesDo: 
+									[ :repo |
+										 repo projectPath = 'jig08/sQuick_new'  ifTrue: [ resourcePath := repo directory ] 
+									]. 
+	resourceFolder  := resourcePath / 'sQuick_new/resources'.
 
 	
 	StandardFonts listFont: font .
