@@ -55,8 +55,7 @@ initialize
 	srchBtn roundedCorners: 4 .
 	srchBtn position: 800@120.
 	srchBtn extent: 100@50.
-	"srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. SearchQuick searchQuick: popUp myString. popUp printResult. ]."
-	
+	"srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. SearchQuick searchQuick: popUp myString. popUp printResult. ]."	
 	srchBtn on: #click send: #value to: [searchFor accept . popUp printSearchResults ."popUp openAndPrint  ." ].
 	
 	helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
@@ -67,6 +66,7 @@ initialize
 	helpBtn roundedCorners: 4 .
 	helpBtn position: 300@400.
 	helpBtn extent: 100@50.
+	helpBtn on: #click send: #value to: [ self helpPopUp. ].
 	
 	aboutBtn := SimpleButtonMorph newWithLabel: 'About sQuick'.
 	aboutBtn color: Color paleTan .
@@ -76,6 +76,7 @@ initialize
 	aboutBtn roundedCorners: 4 .
 	aboutBtn position: 540@400.
 	aboutBtn extent: 100@50.
+	aboutBtn on: #click send: #value to: [ self aboutPopUp . ].
 	
 	feedBtn := SimpleButtonMorph newWithLabel: 'Feedback' .
 	feedBtn color: Color paleTan .
@@ -85,6 +86,7 @@ initialize
 	feedBtn roundedCorners: 4 .
 	feedBtn position: 800@400.
 	feedBtn extent: 100@50.
+	feedBtn  on: #click send: #value to: [ self feedPopUp. ].
 				
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
