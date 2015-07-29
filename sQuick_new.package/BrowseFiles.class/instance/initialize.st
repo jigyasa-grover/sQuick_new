@@ -2,7 +2,6 @@ initialize
 initialize
 	
 	| font resourceFolder resourcePath d|
-	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
 	MCGitHubRepository allSubInstancesDo: 
@@ -11,7 +10,8 @@ initialize
 									]. 
 	resourceFolder  := resourcePath / 'sQuick_new/resources'.
 
-	
+	"font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10."
+	font := StandardFonts defaultFont .
 	StandardFonts listFont: font .
 	StandardFonts menuFont: font.
 	StandardFonts codeFont: font .
