@@ -1,7 +1,7 @@
 initialization
 initialize	
 	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp |
-	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.
+	
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
 	MCGitHubRepository allSubInstancesDo: 
@@ -10,6 +10,8 @@ initialize
 									]. 
 	resourceFolder  := resourcePath / 'sQuick_new/resources'.
 	
+	"font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10."
+	font := StandardFonts defaultFont .
 	StandardFonts listFont: font .
 	StandardFonts menuFont: font.
 	StandardFonts codeFont: font .
@@ -119,7 +121,7 @@ initialize
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_bg.gif').
 	aPoint := World extent.
-	box extent: aPoint .
+	"box extent: aPoint ."
 	box addMorph: header.
 	box addMorph: searchFor .
 	box addMorph: srchBtn.
@@ -132,3 +134,6 @@ initialize
 	box addMorph: timeStamp.
 	box addMorph: codeLink .
 	box openInWindowLabeled: 'sQuick'.
+
+
+
