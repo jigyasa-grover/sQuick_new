@@ -1,6 +1,6 @@
 initialization
 initialize	
-	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp |
+	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp searchForHeader |
 	
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
@@ -23,11 +23,11 @@ initialize
 	header position: 0@0.
 		
 	browseOptn := TextMorph new.
-	browseOptn newContents: 'Current files'.
-	browseOptn position: 75@150.
-	browseOptn extent: 100@50.
+	browseOptn newContents: 'Scan through the topical text collection available ! Click BROWSE FILES. Also check out how to add new text in the HELP section'.
+	browseOptn position: 150@310.
+	browseOptn extent: 400@50.
 	
-	browseBtn := self myButtonWithLabel: 'Browse Files' color: Color paleTan borderColor: Color brown helpText: 'Click to browse files' position: 75@200.
+	browseBtn := self myButtonWithLabel: 'Browse Files' color: Color paleTan borderColor: Color brown helpText: 'Click to browse files' position: 650@300.
 	browseBtn on: #click send: #value to: [IndexInterface delete. BrowseFiles open].
 	
 	"browseBtn := SimpleButtonMorph newWithLabel: 'Browse Files'.
@@ -42,15 +42,18 @@ initialize
 	
 	popUp := PopUp basicNew.
 	
+	searchForHeader := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'searchHeader.gif').
+	searchForHeader position: 180@200.
+	
 	searchFor := PluggableTextFieldMorph  on: popUp text: #myString  accept: #myString: .
 	searchFor acceptOnCR: true.
-	searchFor position: 300@130.
+	searchFor position: 150@130.
 	searchFor height: 30.
 	searchFor width: 450.
 	searchFor ghostText: 'Type the search string ...'.
 	searchFor borderWidth: 1.
 	
-	srchBtn := self myButtonWithLabel: 'Search' color: Color paleTan borderColor: Color brown helpText: 'Click to search for the entered string' position: 800@120.
+	srchBtn := self myButtonWithLabel: 'Search' color: Color paleTan borderColor: Color brown helpText: 'Click to search for the entered string' position: 650@120.
 	srchBtn on: #click send: #value to: [searchFor accept . popUp printSearchResults ."popUp openAndPrint  ." ].
 	
 	"srchBtn := SimpleButtonMorph newWithLabel: 'Search'.
@@ -63,7 +66,7 @@ initialize
 	srchBtn extent: 100@50.
 	srchBtn on: #click send: #value to: [ searchFor accept. IndexInterface delete . popUp open. SearchQuick searchQuick: popUp myString. popUp printResult. ]."
 	
-	helpBtn := self myButtonWithLabel: 'Help | Tutorial' color: Color paleTan borderColor: Color brown helpText: 'Click here to seek help on using searchQuick' position: 300@400.
+	helpBtn := self myButtonWithLabel: 'Help | Tutorial' color: Color paleTan borderColor: Color brown helpText: 'Click here to seek help on using searchQuick' position: 150@400.
 	helpBtn on: #click send: #value to: [ self helpPopUp. ].
 	
 	"helpBtn := SimpleButtonMorph newWithLabel: 'Help | Tutorial'.
@@ -76,7 +79,7 @@ initialize
 	helpBtn extent: 100@50.
 	helpBtn on: #click send: #value to: [ self helpPopUp. ]."
 	
-	aboutBtn := self myButtonWithLabel: 'About sQuick' color: Color paleTan borderColor: Color brown helpText: 'Click to see details of searchQuick' position: 540@400.
+	aboutBtn := self myButtonWithLabel: 'About sQuick' color: Color paleTan borderColor: Color brown helpText: 'Click to see details of searchQuick' position: 390@400.
 	aboutBtn on: #click send: #value to: [ self aboutPopUp. ].
 	
 	"aboutBtn := SimpleButtonMorph newWithLabel: 'About sQuick'.
@@ -89,7 +92,7 @@ initialize
 	aboutBtn extent: 100@50.
 	aboutBtn on: #click send: #value to: [ self aboutPopUp . ]."
 	
-	feedBtn := self myButtonWithLabel: 'Feedback' color: Color paleTan borderColor: Color brown helpText: 'Click for contact details of searchQuick' position: 800@400.
+	feedBtn := self myButtonWithLabel: 'Feedback' color: Color paleTan borderColor: Color brown helpText: 'Click for contact details of searchQuick' position: 650@400.
 	feedBtn on: #click send: #value to: [ self feedPopUp. ].
 	
 	"feedBtn := SimpleButtonMorph newWithLabel: 'Feedback' .
@@ -105,25 +108,26 @@ initialize
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
 	timeStamp newContents: d asString .
-	timeStamp position: 300@500.
+	timeStamp position: 150@500.
 	timeStamp  extent: 150@50.
 	
 	dateStamp := TextMorph new.
 	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
 	dateStamp newContents: d asString .
-	dateStamp position: 300@530.
+	dateStamp position: 150@530.
 	dateStamp extent: 150@50.
 	
 	codeLink := TextMorph new.
-	codeLink newContents: 'Code Repository:'.
-	codeLink position: 650@500.
-	codeLink extent: 200@50.	
+	codeLink newContents: 'Code Repository: github.com/jig08/sQuick_new'.
+	codeLink position: 500@500.
+	codeLink extent: 400@50.
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_bg.gif').
 	aPoint := World extent.
-	"box extent: aPoint ."
+	box extent: aPoint .
 	box addMorph: header.
 	box addMorph: searchFor .
+	box addMorph: searchForHeader .
 	box addMorph: srchBtn.
 	box addMorph: browseOptn .
 	box addMorph: browseBtn.
@@ -133,7 +137,20 @@ initialize
 	box addMorph: dateStamp.
 	box addMorph: timeStamp.
 	box addMorph: codeLink .
-	box openInWindowLabeled: 'sQuick'.
+	"box openInWindowLabeled: 'sQuick'."
+	
+	boxWindow := SystemWindow new.
+	boxWindow setLabel: 'searchQuick'.
+	boxWindow addMorph: box.
+	boxWindow extent: World extent.
+	boxWindow openInWorld.
+	
+	
+	
+	
+	
+	
+	
 
 
 

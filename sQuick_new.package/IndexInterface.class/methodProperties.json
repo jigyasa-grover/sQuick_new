@@ -7,8 +7,10 @@
 		"run" : "jigyasagrover 6/24/2015 22:48" },
 	"instance" : {
 		"aboutPopUp" : "jigyasa 7/28/2015 14:35",
+		"boxWindow" : "jigyasa 7/30/2015 00:44",
+		"boxWindow:" : "jigyasa 7/30/2015 00:44",
 		"delete" : "jigyasagrover 6/24/2015 23:07",
 		"feedPopUp" : "jigyasa 7/28/2015 14:38",
 		"helpPopUp" : "jigyasa 7/28/2015 14:35",
-		"initialize" : "jigyasa 7/29/2015 23:01",
+		"initialize" : "jigyasa 7/30/2015 00:51",
 		"myButtonWithLabel:color:borderColor:helpText:position:" : "jigyasa 7/29/2015 22:14" } }
