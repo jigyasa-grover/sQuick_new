@@ -23,9 +23,9 @@ initialize
 	header position: 0@0.
 		
 	searchHdr := TextMorph new.
-	searchHdr newContents: 'Browse Your Files '.
-	searchHdr position: 300@150.
-	searchHdr extent: 175@50.
+	searchHdr newContents: 'BROWSE YOUR FILES: Click on the file title in the list and view its content !'.
+	searchHdr position: 400@150.
+	searchHdr extent: 400@50.
 	searchHdr font: font .
 	
 	ptm := PluggableTextMorph new.
@@ -33,15 +33,15 @@ initialize
 	ptm position: 300@200.
 	ptm extent: 600@300.	
 	txtViewer := ptm textMorph.
-	
-	
-	browse := MenuMorph new.	
+		
+	browse := MenuMorph new.
+	browse color: Color paleYellow.
 	browse stayUp: true.
 	browse position: 50@200.
 	browse extent: 400@1000.
 		
 	browseHdr := TextMorph new.
-	browseHdr newContents: 'Browse'.
+	browseHdr newContents: 'FILES   AVAILABLE'.
 	browseHdr backgroundColor: Color paleBlue .
 	browseHdr extent: 175@50.
 	browse addMorph: browseHdr  .	
@@ -92,7 +92,7 @@ initialize
 	backBtn roundedCorners: 4 .
 	backBtn position: 800@550.
 	backBtn extent: 100@50.
-	backBtn on: #click send: #value to: [BrowseFiles delete . IndexInterface open].
+	backBtn on: #click send: #value to: [self boxWindow close. BrowseFiles delete . IndexInterface open].
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').
 	box extent: (World extent ).
@@ -103,5 +103,13 @@ initialize
 	box addMorph: backBtn .
 	box addMorph: ptm.
 	box addMorph: browse  .
-	box openInWindow .
+	
+	boxWindow := SystemWindow new.
+	boxWindow setLabel: 'searchQuick - Browse Files'.
+	box position: 150@0.
+	boxWindow addMorph: box.
+	boxWindow extent: World extent.
+	boxWindow openInWindowLabeled: 'searchQuick - Browse Files'.
+	boxWindow fullscreen.
+	boxWindow color: Color black.
 	

@@ -28,7 +28,7 @@ initialize
 	browseOptn extent: 400@50.
 	
 	browseBtn := self myButtonWithLabel: 'Browse Files' color: Color paleTan borderColor: Color brown helpText: 'Click to browse files' position: 700@300.
-	browseBtn on: #click send: #value to: [IndexInterface delete. BrowseFiles open].
+	browseBtn on: #click send: #value to: [self boxWindow close. IndexInterface delete. BrowseFiles open].
 	
 	"browseBtn := SimpleButtonMorph newWithLabel: 'Browse Files'.
 	browseBtn color: Color paleTan .

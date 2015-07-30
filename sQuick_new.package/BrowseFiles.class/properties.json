@@ -17,7 +17,8 @@
 		"timeStamp",
 		"dateStamp",
 		"backBtn",
-		"fileList" ],
+		"fileList",
+		"boxWindow" ],
 	"name" : "BrowseFiles",
 	"pools" : [
 		 ],
