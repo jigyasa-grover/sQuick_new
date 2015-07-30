@@ -8,5 +8,5 @@ myButtonWithLabel: aString color: colorOfButton borderColor: colorOfBorder helpT
 	x helpText: text asString.
 	x roundedCorners: 4 .
 	x position: aPoint .
-	x extent: 100@50.
+	x extent: 120@60.
 	^x
