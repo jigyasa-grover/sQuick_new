@@ -143,8 +143,9 @@ initialize
 	boxWindow setLabel: 'searchQuick'.
 	boxWindow addMorph: box.
 	boxWindow extent: World extent.
-	boxWindow openInWorld.
+	boxWindow openInWindowLabeled: 'searchQuick'.
 	boxWindow fullscreen.
+	boxWindow color: Color black.
 	
 	
 	
