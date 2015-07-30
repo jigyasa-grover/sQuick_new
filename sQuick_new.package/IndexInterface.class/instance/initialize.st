@@ -107,14 +107,14 @@ initialize
 				
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
-	timeStamp newContents: d asString .
+	timeStamp newContents: 'Time: ', d asString .
 	timeStamp position: 150@500.
 	timeStamp  extent: 150@50.
 	
 	dateStamp := TextMorph new.
 	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
-	dateStamp newContents: d asString .
-	dateStamp position: 150@530.
+	dateStamp newContents: 'Date: ', d asString .
+	dateStamp position: 150@515.
 	dateStamp extent: 150@50.
 	
 	codeLink := TextMorph new.
@@ -144,6 +144,7 @@ initialize
 	boxWindow addMorph: box.
 	boxWindow extent: World extent.
 	boxWindow openInWorld.
+	boxWindow fullscreen.
 	
 	
 	
