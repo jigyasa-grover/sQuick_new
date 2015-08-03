@@ -10,9 +10,8 @@
 
 - `World` > `Tools` > `Configuration Browser` > `sQuick_new(jigyasagrover)`
 
-
-Do It `IndexInterface open` in Playground/Workspace to check it out.
-
+Do it `IndexInterface open` in Playground/Workspace to check it out.
+-----------
 
 # Current Status
 
@@ -20,6 +19,8 @@ Do It `IndexInterface open` in Playground/Workspace to check it out.
 - Internal File Browser for current Pharo Image built.
 - Working search functionality .
 - NEXT: GUI Enhancement.
+
+
 
 
 **Feedbacks are welcome :smiley: kindly fork, explore and suggest !**
