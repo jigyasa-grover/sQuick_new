@@ -92,7 +92,7 @@ initialize
 	backBtn roundedCorners: 4 .
 	backBtn position: 800@550.
 	backBtn extent: 100@50.
-	backBtn on: #click send: #value to: [self boxWindow close. BrowseFiles delete . IndexInterface open].
+	backBtn on: #click send: #value to: [self boxWindow window close. BrowseFiles delete . IndexInterface open].
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').
 	box extent: (World extent ).

@@ -10,5 +10,6 @@ delete
 	box isNil ifFalse: [ boxWindow close. box window close. box delete].
 	box := nil.
 	boxWindow delete. 
+	boxWindow window close. 
 	boxWindow close. 
 	boxWindow := nil.
