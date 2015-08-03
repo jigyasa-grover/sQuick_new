@@ -10,8 +10,8 @@
 
 - `World` > `Tools` > `Configuration Browser` > `sQuick_new(jigyasagrover)`
 
-Do it `IndexInterface open` in Playground/Workspace to check it out.
------------
+###### **Do it `IndexInterface open` in Playground/Workspace to check it out.**
+
 
 # Current Status
 
