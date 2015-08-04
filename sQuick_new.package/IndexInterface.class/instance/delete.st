@@ -1,8 +1,9 @@
 submorphs-add/remove
 delete
-	box isNil ifFalse: [box window close .  box delete.].
+	box isNil ifFalse: [boxWindow window close. boxWindow window delete . boxWindow close. box window close . boxWindow delete. box delete.].
 	box := nil.
-	boxWindow close. 
 	boxWindow window close. 
+	boxWindow window delete .	
+	boxWindow close. 
 	boxWindow delete.
 	boxWindow := nil.

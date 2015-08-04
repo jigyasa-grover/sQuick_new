@@ -27,13 +27,14 @@ printSearchResults
  																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
  																		} 
 																		]
-							).
+							) .
 							
 					backBtn := dialog newButtonFor: self action: #backButtonClicked label: 'Back' help: 'Back'.
 					backBtn extent: 750@30.
 							}
  			);
  	model: nil.
-      builder newScrollPaneFor: searchResultsAccordion.
+	searchResultsAccordion extent: World extent.
+          builder newScrollPaneFor: searchResultsAccordion.
  	builder openModal: dialog.
 	"dialog newScrollPaneFor: searchResultsAccordion ."
