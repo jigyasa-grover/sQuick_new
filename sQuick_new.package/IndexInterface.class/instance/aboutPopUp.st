@@ -10,3 +10,4 @@ aboutPopUp
  			);
  	model: nil.
  	builder openModal: dialog.
+	boxWindow window color: Color black .
