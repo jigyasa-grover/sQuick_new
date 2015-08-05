@@ -21,7 +21,7 @@ printSearchResults
 																		(  dialog newTextEditorFor: (  ValueHolder new contents: r content asString   )
 																		 getText: #contents setText: #contents:  )minHeight: 150.
 																	    }
- 															)minWidth:World extent x; minHeight: 10;color: Color paleBuff 
+ 															)minWidth:World extent x; minHeight: 10;color: Color paleMagenta 
  														)
  																cellInset: 0;
  																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
