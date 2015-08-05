@@ -74,14 +74,14 @@ initialize
 	
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
-	timeStamp newContents: d asString .
+	timeStamp newContents: 'Time: ', d asString .
 	timeStamp position: 300@550.
 	timeStamp  extent: 150@50.
-	dateStamp := TextMorph new.
 	
+	dateStamp := TextMorph new.
 	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
-	dateStamp newContents: d asString .
-	dateStamp position: 300@580.
+	dateStamp newContents: 'Date: ', d asString .
+	dateStamp position: 300@570.
 	dateStamp extent: 150@50.
 	
 	backBtn := SimpleButtonMorph newWithLabel: 'Back'.
