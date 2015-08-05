@@ -10,7 +10,6 @@ initialize
 									]. 
 	resourceFolder  := resourcePath / 'sQuick_new/resources'.
 	
-	"font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10."
 	font := StandardFonts defaultFont .
 	StandardFonts listFont: font .
 	StandardFonts menuFont: font.
