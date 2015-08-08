@@ -9,8 +9,8 @@ delete
 	Smalltalk garbageCollect.
 	box isNil ifFalse: [ boxWindow window close. boxWindow window delete. boxWindow close. boxWindow delete. box window close. box delete].
 	box := nil.
-	boxWindow delete. 
-	boxWindow window close. 
-	boxWindow close. 
-	boxWindow window delete .
+	self boxWindow window close. 
+	self boxWindow window delete .
+	self boxWindow close. 
+	self boxWindow delete. 
 	boxWindow := nil.

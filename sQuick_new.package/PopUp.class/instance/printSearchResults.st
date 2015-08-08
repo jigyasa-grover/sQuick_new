@@ -1,6 +1,5 @@
 as yet unclassified
 printSearchResults
-
 	IndexInterface delete . 
 	self open. 
 	SearchQuick searchQuick: self myString.	
@@ -16,8 +15,8 @@ printSearchResults
  												dialog newRow: {
  														(
  															(
-																dialog newExpander: r title asString
- 																forAll: {	
+																dialog newExpander: (r title asString, String cr, r content asString  ) 
+ 																forAll: {
 																		(  dialog newTextEditorFor: (  ValueHolder new contents: r content asString   )
 																		 getText: #contents setText: #contents:  )minHeight: 150.
 																	    }
@@ -26,13 +25,15 @@ printSearchResults
  																cellInset: 0;
  																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
  																		} 
-																		]
+															]
 							) .
 							
 					backBtn := dialog newButtonFor: self action: #backButtonClicked label: 'BACK' help: 'Back'.
 					backBtn width: World extent x.
 					backBtn height: 30.
 					backBtn color: Color orange.
+					backBtn borderColor: Color orange .
+					backBtn borderWidth: 2.
 							}
  			); minWidth: World extent x; minHeight: World extent y;
  	model: nil.
