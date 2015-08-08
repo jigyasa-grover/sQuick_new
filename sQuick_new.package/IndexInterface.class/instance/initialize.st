@@ -138,12 +138,13 @@ initialize
 	box addMorph: codeLink .
 	"box openInWindowLabeled: 'sQuick'."
 	
-	boxWindow := SystemWindow new.
+		
+	"boxWindow := SystemWindow new."
+	boxWindow := box openInWindow .
 	boxWindow setLabel: 'searchQuick'.
 	box position: 150@0.
 	boxWindow addMorph: box.
-	boxWindow extent: World extent.
-	boxWindow openInWindowLabeled: 'searchQuick'.
+	"boxWindow openInWindowLabeled: 'searchQuick'."
 	boxWindow fullscreen.
 	boxWindow color: Color black.
 	
