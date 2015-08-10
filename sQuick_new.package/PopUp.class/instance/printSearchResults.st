@@ -14,7 +14,7 @@ printSearchResults
 					dialog newColumn: 
  							(
 								SearchQuick myResult collect: [ :r |
-												x newContents: (r title asString, String cr, r content asString ).
+												x newContents: (r title asString, String cr, r content asString ) truncateWithElipsisTo: 50.
  												dialog newRow: {
  														(
  															(
