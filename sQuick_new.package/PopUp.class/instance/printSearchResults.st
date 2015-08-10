@@ -1,10 +1,12 @@
 as yet unclassified
 printSearchResults
+	| x |
 	IndexInterface delete . 
 	self open. 
 	SearchQuick searchQuick: self myString.	
 	"builder := WidgetExamples exampleBuilder."	
 	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR "', myString , '"').
+	x := TextMorph new.
 	
 	searchResultsAccordion :=  dialog contentMorph:
 			(
@@ -12,15 +14,17 @@ printSearchResults
 					dialog newColumn: 
  							(
 								SearchQuick myResult collect: [ :r |
+												x newContents: (r title asString, String cr, r content asString ).
  												dialog newRow: {
  														(
  															(
-																dialog newExpander: (r title asString, String cr, r content asString  ) 
+																
+																dialog newExpander: (r title asString  ) 
  																forAll: {
 																		(  dialog newTextEditorFor: (  ValueHolder new contents: r content asString   )
 																		 getText: #contents setText: #contents:  )minHeight: 150.
 																	    }
- 															)minWidth:World extent x; minHeight: 10;color: Color paleMagenta 
+ 															)minWidth:World extent x; minHeight: 10;color: Color paleMagenta; titleMorph: x; yourself 
  														)
  																cellInset: 0;
  																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
