@@ -1,6 +1,6 @@
 initialization
 initialize	
-	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp searchForHeader fs  |
+	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp searchForHeader   |
 	
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
@@ -124,6 +124,7 @@ initialize
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_bg.gif').
 	aPoint := World extent.
 	box extent: aPoint .
+	
 	box addMorph: header.
 	box addMorph: searchFor .
 	box addMorph: searchForHeader .
@@ -136,31 +137,10 @@ initialize
 	box addMorph: dateStamp.
 	box addMorph: timeStamp.
 	box addMorph: codeLink .
-	"box openInWindowLabeled: 'sQuick'."
 	
-		
-	"boxWindow := SystemWindow new.
 	boxWindow := box openInWindow .
 	boxWindow setLabel: 'searchQuick'.
 	box position: 150@0.
 	boxWindow addMorph: box.
 	boxWindow fullscreen.
-	boxWindow color: Color black."
-	
-	fs := GradientFillStyle ramp: {0.0 -> Color red. 1.0 -> Color green}.
-	fs origin: box bounds center.
-	fs direction: (box bounds width // 2) @ 0.
-	fs radial: true.
-	box fillStyle: fs.
-	boxWindow := box openInWindowLabeled: 'blah' inWorld: World.
-	boxWindow fullscreen.
 	boxWindow color: Color black.
-	
-	
-	
-	
-	
-	
-
-
-
