@@ -1,6 +1,6 @@
 initialization
 initialize	
-	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp searchForHeader |
+	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp searchForHeader fs  |
 	
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
@@ -139,15 +139,22 @@ initialize
 	"box openInWindowLabeled: 'sQuick'."
 	
 		
-	"boxWindow := SystemWindow new."
+	"boxWindow := SystemWindow new.
 	boxWindow := box openInWindow .
 	boxWindow setLabel: 'searchQuick'.
 	box position: 150@0.
 	boxWindow addMorph: box.
-	"boxWindow openInWindowLabeled: 'searchQuick'."
+	boxWindow fullscreen.
+	boxWindow color: Color black."
+	
+	fs := GradientFillStyle ramp: {0.0 -> Color red. 1.0 -> Color green}.
+	fs origin: box bounds center.
+	fs direction: (box bounds width // 2) @ 0.
+	fs radial: true.
+	box fillStyle: fs.
+	boxWindow := box openInWindowLabeled: 'blah' inWorld: World.
 	boxWindow fullscreen.
 	boxWindow color: Color black.
-	
 	
 	
 	
