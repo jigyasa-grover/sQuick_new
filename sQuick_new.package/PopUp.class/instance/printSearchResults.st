@@ -6,7 +6,6 @@ printSearchResults
 	SearchQuick searchQuick: self myString.	
 	"builder := WidgetExamples exampleBuilder."	
 	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR "', myString , '"').
-	x := TextMorph new.
 	
 	searchResultsAccordion :=  dialog contentMorph:
 			(
@@ -14,7 +13,11 @@ printSearchResults
 					dialog newColumn: 
  							(
 								SearchQuick myResult collect: [ :r |
-												x newContents: (r title asString, String cr, r content asString ) truncateWithElipsisTo: 50.
+												
+												x := TextMorph new.
+												x newContents: ((r title asString, String cr, r content asString ) truncateWithElipsisTo: 50).
+												x width: World extent x.
+												
  												dialog newRow: {
  														(
  															(
