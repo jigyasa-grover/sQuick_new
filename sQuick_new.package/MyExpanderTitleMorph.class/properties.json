@@ -1,0 +1,14 @@
+{
+	"category" : "sQuick_new-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MyExpanderTitleMorph",
+	"pools" : [
+		 ],
+	"super" : "ExpanderTitleMorph",
+	"type" : "normal" }
