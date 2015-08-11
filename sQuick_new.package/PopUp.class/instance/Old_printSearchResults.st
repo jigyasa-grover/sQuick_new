@@ -1,26 +1,29 @@
 as yet unclassified
-printSearchResults
-	| x scrollPane expanders exX  |
+Old_printSearchResults
+	| x |
 	IndexInterface delete . 
 	self open. 
 	SearchQuick searchQuick: self myString.	
 	"builder := WidgetExamples exampleBuilder."	
 	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR "', myString , '"').
 	
-	exX := (World extent x)-40.
-	expanders := dialog newColumn: 
+	searchResultsAccordion :=  dialog contentMorph:
+			(
+				dialog newColumn: { 
+					dialog newColumn: 
  							(
 								SearchQuick myResult collect: [ :r |
 												
 												"x := TextMorph new."
 												x  := MyExpanderTitleMorph new.
 												"x newContents: ((r title asString, String cr, r content asString, '......' ) truncateWithElipsisTo: 35)."
-												x titleText: (('TITLE: ', r title asString, String cr, 'CONTENT:  ', r content asString, '......' ) truncateWithElipsisTo: 45).
+												x titleText: (    ('TITLE: ',r title asString, String cr, 'CONTENT: ', r content asString, '......'  ) truncateWithElipsisTo: 50).
 												x width: World extent x.
 												
  												dialog newRow: {
  														(
  															(
+																
 																dialog newExpander: (r title asString  ) 
  																forAll: {
 																		(  dialog newTextEditorFor: (  ValueHolder new contents: r content asString   )
@@ -32,20 +35,7 @@ printSearchResults
  																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
  																		} 
 															]
-							).
-	
-	expanders bounds: (Rectangle origin: 15@10 extent: exX@800  ).
-	scrollPane := dialog newScrollPaneFor: expanders.
-	scrollPane
-		scrollTarget: expanders;
-		hResizing: #spaceFill;
-		vResizing: #spaceFill;
-		minHeight: 200;
-		minWidth: 500.
-	searchResultsAccordion :=  dialog contentMorph:
-			(
-				dialog newColumn: {
-					scrollPane.
+							) .
 							
 					backBtn := dialog newButtonFor: self action: #backButtonClicked label: 'BACK' help: 'Back'.
 					backBtn width: World extent x.
@@ -56,14 +46,14 @@ printSearchResults
 							}
  			); minWidth: World extent x; minHeight: World extent y;
  	model: nil.
-	
 	searchResultsAccordion position: 0@0.
 	searchResultsAccordion extent: World extent.
 	searchResultsAccordion width: World extent x.
 	searchResultsAccordion height: World extent y.
+          builder newScrollPaneFor: searchResultsAccordion.
 	dialog position: 0@0.
 	dialog  extent: World extent.
-	"dialog openInWorld ." dialog openFullscreen.
+	dialog openFullscreen .
 	dialog color: Color black.
  	"builder openModal: dialog."
 	"dialog newScrollPaneFor: searchResultsAccordion ."
