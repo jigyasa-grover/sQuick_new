@@ -1,6 +1,6 @@
 initialization
 initialize	
-	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp searchForHeader   |
+	| font resourceFolder resourcePath d popUp aPoint header browseOptn browseBtn searchFor srchBtn helpBtn aboutBtn feedBtn timeStamp dateStamp searchForHeader   boxPanel |
 	
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
@@ -138,9 +138,20 @@ initialize
 	box addMorph: timeStamp.
 	box addMorph: codeLink .
 	
-	boxWindow := box openInWindow .
+	"boxWindow := box openInWindow .
 	boxWindow setLabel: 'searchQuick'.
 	box position: 150@0.
 	boxWindow addMorph: box.
 	boxWindow fullscreen.
-	boxWindow color: Color black.
+	boxWindow color: Color black."
+	
+  boxPanel := Morph new
+        color: Color black;
+        changeTableLayout;
+        wrapCentering: #center;
+        addMorph: box;
+        yourself.
+    boxWindow := boxPanel openInWindow.
+    boxWindow setLabel: 'searchQuick'.
+    box position: 150@0.
+    boxWindow fullscreen.
