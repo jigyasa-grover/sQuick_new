@@ -14,8 +14,10 @@ printSearchResults
  							(
 								SearchQuick myResult collect: [ :r |
 												
-												x := TextMorph new.
-												x newContents: ((r title asString, String cr, r content asString ) truncateWithElipsisTo: 50).
+												"x := TextMorph new."
+												x  := MyExpanderTitleMorph new.
+												"x newContents: ((r title asString, String cr, r content asString, '......' ) truncateWithElipsisTo: 35)."
+												x titleText: ((r title asString, String cr, r content asString, '......' ) truncateWithElipsisTo: 35).
 												x width: World extent x.
 												
  												dialog newRow: {
