@@ -1,7 +1,7 @@
 initialize
 initialize
 	
-	| font resourceFolder resourcePath d|
+	| font resourceFolder resourcePath d boxPanel |
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
 	MCGitHubRepository allSubInstancesDo: 
@@ -104,12 +104,14 @@ initialize
 	box addMorph: ptm.
 	box addMorph: browse  .
 	
-	"boxWindow := SystemWindow new."
-	boxWindow := box openInWindow.
-	boxWindow setLabel: 'searchQuick - Browse Files'.
-	box position: 150@0.
-	boxWindow addMorph: box.
-	"boxWindow openInWindowLabeled: 'searchQuick - Browse Files'."
-	boxWindow fullscreen.
-	boxWindow color: Color black.
+	  boxPanel := Morph new
+        color: Color black;
+        changeTableLayout;
+        wrapCentering: #center;
+        addMorph: box;
+        yourself.
+    boxWindow := boxPanel openInWindow.
+    boxWindow setLabel: 'searchQuick'.
+    box position: 150@0.
+    boxWindow fullscreen.
 	
