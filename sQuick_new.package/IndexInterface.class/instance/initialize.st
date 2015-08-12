@@ -156,3 +156,4 @@ initialize
     box position: 150@0.
     boxWindow fullscreen.
     boxWindow extent: World extent.
+    boxWindow position: 0@0.

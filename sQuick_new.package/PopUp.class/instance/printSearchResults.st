@@ -54,7 +54,7 @@ printSearchResults
 					backBtn borderColor: Color orange .
 					backBtn borderWidth: 2.
 							}
- 			); minWidth: World extent x; minHeight: World extent y;
+ 			); minWidth: exX; minHeight: World extent y;
  	model: nil.
 	
 	searchResultsAccordion position: 0@0.
