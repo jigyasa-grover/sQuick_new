@@ -114,4 +114,5 @@ initialize
     boxWindow setLabel: 'searchQuick'.
     box position: 150@0.
     boxWindow fullscreen.
+    boxWindow position: 0@0.
 	

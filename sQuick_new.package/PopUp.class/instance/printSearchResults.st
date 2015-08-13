@@ -1,4 +1,4 @@
-as yet unclassified
+Print Search Results
 printSearchResults
 	| x scrollPane expanders exX  |
 	IndexInterface delete . 
@@ -24,7 +24,7 @@ printSearchResults
 																dialog newExpander: (r title asString  ) 
  																forAll: {
 																		(  dialog newTextEditorFor: (  ValueHolder new contents: r content asString   )
-																		 getText: #contents setText: #contents:  )minHeight: 150.
+																		 getText: #contents setText: #contents:  )minHeight: (World extent y)/5.
 																	    }
  															)minWidth:World extent x; minHeight: 10;color: Color paleMagenta; titleMorph: x; yourself 
  														)
@@ -34,14 +34,14 @@ printSearchResults
 															]
 							).
 	
-	expanders bounds: (Rectangle origin: 15@10 extent: exX@800  ).
+	expanders bounds: (Rectangle origin: 15@10 extent: exX@(World extent y)  ).
 	scrollPane := dialog newScrollPaneFor: expanders.
 	scrollPane
 		scrollTarget: expanders;
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
-		minHeight: 200;
-		minWidth: 500.
+		minHeight: (World extent y)/4;
+		minWidth: (World extent x)/(2.5).
 	searchResultsAccordion :=  dialog contentMorph:
 			(
 				dialog newColumn: {
@@ -49,7 +49,7 @@ printSearchResults
 							
 					backBtn := dialog newButtonFor: self action: #backButtonClicked label: 'BACK' help: 'Back'.
 					backBtn width: World extent x.
-					backBtn height: 30.
+					backBtn height: (World extent y)/25.
 					backBtn color: Color orange.
 					backBtn borderColor: Color orange .
 					backBtn borderWidth: 2.
