@@ -1,6 +1,6 @@
 Print Search Results
 printSearchResults
-	| x scrollPane expanders exX    |
+	| x scrollPane expanders exX    searchBar searchBtn |
 	IndexInterface delete . 
 	self open. 
 	SearchQuick searchQuick: self myString.	
@@ -8,20 +8,7 @@ printSearchResults
 	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR "', myString , '"').
 	
 	exX := (World extent x)-40.
-	
-	"searchBar := dialog newColumn:
-	(
-	         dialog newRow:  { 
-	                                                 dialog newPluggableTextFieldMorph on: self text: #myString accept: #myString.
-	                                                 searchFor := PluggableTextFieldMorph  on: self text: #myString  accept: #myString: .
-	                                                  searchFor acceptOnCR: true.
-	                                                   searchFor height: (World extent y/24.8).
-	                                                   searchFor width: World extent x/2.9.
-	                                                   searchFor ghostText: self myString .
-	                                                   searchFor borderWidth: 1.
-	                                              }
-	)."
-	
+		
 	expanders := dialog newColumn: 
  							(
 								SearchQuick myResult collect: [ :r |
@@ -56,13 +43,29 @@ printSearchResults
 		vResizing: #spaceFill;
 		minHeight: (World extent y)/4;
 		minWidth: (World extent x)/(2.5).
+		
 	searchResultsAccordion :=  dialog contentMorph:
 			(
 				dialog newColumn: {
+				        	dialog newRow: { 
+				   
+							searchBar := dialog newButtonFor: self  action: nil label: ' SEARCH   RESULTS  FOR :  "', myString , '"' help:  'SEARCH   RESULTS  FOR :  "', myString, '"'.
+				        			searchBar width: World extent x/1.58.
+							searchBar height: (World extent y)/25.
+							searchBar color: Color orange.
+							searchBar borderColor: Color orange .
+							
+							searchBtn := dialog newButtonFor: self action: #backButtonClicked label: 'SEARCH FOR ANOTHER TERM' help: 'Search For Another Term'.
+							searchBtn width: World extent x/2.8.
+							searchBtn height: (World extent y)/25.
+							searchBtn color: Color orange.
+							searchBtn borderColor: Color orange .
+								     } .
+				
 					scrollPane.
 							
 					backBtn := dialog newButtonFor: self action: #backButtonClicked label: 'BACK' help: 'Back'.
-					backBtn width: World extent x.
+					backBtn width: World extent x/1.005.
 					backBtn height: (World extent y)/25.
 					backBtn color: Color orange.
 					backBtn borderColor: Color orange .
