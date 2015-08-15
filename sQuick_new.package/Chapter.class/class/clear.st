@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 clear
 	1 to: (self allSubInstances size) do:[ :index|
 		(self at: index) isNil ifFalse: [ 

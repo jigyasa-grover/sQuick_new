@@ -1,7 +1,7 @@
 initialize
 initialize
 	
-	| font resourceFolder resourcePath d boxPanel aPoint |
+	| font resourceFolder resourcePath d boxPanel aPoint c item |
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
 	MCGitHubRepository allSubInstancesDo: 
@@ -62,11 +62,19 @@ initialize
 	MyMenuItem clear.
 		
 	(resourceFolder / 'document') allFiles sort do: [ :f |
-		Document new
-			openWithFile: f;
-			title: f basenameWithoutExtension ].
+		|doc|
+		doc := Document new.
+		doc	openWithFile: f.
+		doc	title: f basenameWithoutExtension.
+		( Chapter entries contains: [ :chapter | 
+			chapter title = doc title ]
+		) 
+		ifTrue: [nil.] 
+		ifFalse: [ c := Chapter new . c := Chapter add: c. item:= MyMenuItem new chapter: c. browse addMenuItem: item.].
+		 ] .
 		
-		Chapter allSubInstances size > 0 ifTrue: [
+		
+		"Chapter allSubInstances size > 0 ifTrue: [
 		1 to: (Chapter allSubInstances size) do: [ :index |
 			|chapter item|
 			chapter := Chapter at: index.
@@ -74,7 +82,7 @@ initialize
 			item chapter title == chapter title 
 			isFalse: [ browse  addMenuItem: item.]
 			 ]
-	          ].
+	          ]."
 	
 
 	"---------------------------------------------------------"
@@ -129,4 +137,4 @@ initialize
     boxWindow setLabel: 'searchQuick - Browse Files'.
     boxWindow fullscreen.
     boxWindow extent: World extent.
-    boxWindow position: 0@0. 
+    boxWindow position: 0@0.  
