@@ -71,10 +71,10 @@ initialize
 			|chapter item|
 			chapter := Chapter at: index.
 			item := MyMenuItem new chapter: chapter. 
-			"item interface: self."
-			browse  addMenuItem: item.
-		].
-	].
+			item chapter title == chapter title 
+			isFalse: [ browse  addMenuItem: item.]
+			 ]
+	          ].
 	
 
 	"---------------------------------------------------------"
@@ -129,5 +129,4 @@ initialize
     boxWindow setLabel: 'searchQuick - Browse Files'.
     boxWindow fullscreen.
     boxWindow extent: World extent.
-    boxWindow position: 0@0.
-	
+    boxWindow position: 0@0. 
