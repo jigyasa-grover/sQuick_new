@@ -77,11 +77,11 @@ initialize
 			c content: doc content.
 			item:= MyMenuItem new chapter: c. 
 			].
-		   MyMenuItem menuEntries do: [ :menuItems |
+		    ] .
+		
+		MyMenuItem menuEntries do: [ :menuItems |
 			browse addMenuItem: menuItems .
 			 ].
-		 ] .
-		
 		
 		"Chapter allSubInstances size > 0 ifTrue: [
 		1 to: (Chapter allSubInstances size) do: [ :index |
