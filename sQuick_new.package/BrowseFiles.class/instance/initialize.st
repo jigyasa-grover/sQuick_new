@@ -70,7 +70,13 @@ initialize
 			chapter title = doc title ]
 		) 
 		ifTrue: [nil.] 
-		ifFalse: [ c := Chapter new . c := Chapter add: c. item:= MyMenuItem new chapter: c. browse addMenuItem: item.].
+		ifFalse: [ 
+			c := Chapter new . 
+			Chapter add: c. 
+			c title: doc title .
+			c content: doc content.
+			item:= MyMenuItem new chapter: c. 
+			browse addMenuItem: item.].
 		 ] .
 		
 		
