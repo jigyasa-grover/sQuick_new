@@ -1,6 +1,6 @@
 Print Search Results
 printSearchResults
-	| x scrollPane expanders exX  |
+	| x scrollPane expanders exX    |
 	IndexInterface delete . 
 	self open. 
 	SearchQuick searchQuick: self myString.	
@@ -8,6 +8,20 @@ printSearchResults
 	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR "', myString , '"').
 	
 	exX := (World extent x)-40.
+	
+	"searchBar := dialog newColumn:
+	(
+	         dialog newRow:  { 
+	                                                 dialog newPluggableTextFieldMorph on: self text: #myString accept: #myString.
+	                                                 searchFor := PluggableTextFieldMorph  on: self text: #myString  accept: #myString: .
+	                                                  searchFor acceptOnCR: true.
+	                                                   searchFor height: (World extent y/24.8).
+	                                                   searchFor width: World extent x/2.9.
+	                                                   searchFor ghostText: self myString .
+	                                                   searchFor borderWidth: 1.
+	                                              }
+	)."
+	
 	expanders := dialog newColumn: 
  							(
 								SearchQuick myResult collect: [ :r |
