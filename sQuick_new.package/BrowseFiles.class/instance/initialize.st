@@ -1,7 +1,7 @@
 initialize
 initialize
 	
-	| font resourceFolder resourcePath d boxPanel |
+	| font resourceFolder resourcePath d boxPanel aPoint |
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
 	MCGitHubRepository allSubInstancesDo: 
@@ -24,26 +24,33 @@ initialize
 		
 	searchHdr := TextMorph new.
 	searchHdr newContents: 'BROWSE YOUR FILES: Click on the file title in the list and view its content !'.
-	searchHdr position: 400@150.
-	searchHdr extent: 400@50.
+	"searchHdr position: 400@150.
+	searchHdr extent: 400@50."
+	searchHdr position: (World extent x/3.25 )@(World extent y/4.96).
+	searchHdr extent: (World extent x/3.25)@(World extent y/14.88).
 	searchHdr font: font .
 	
 	ptm := PluggableTextMorph new.
 	ptm alwaysShowVScrollBar: true.
-	ptm position: 300@200.
-	ptm extent: 600@300.	
+	"ptm position: 300@200.
+	ptm extent: 600@300.	"
+	ptm position:(World extent x/4.336)@(World extent y/3.72).
+	ptm extent:(World extent x/2.168)@(World extent y/2.48).
 	txtViewer := ptm textMorph.
 		
 	browse := MenuMorph new.
 	browse color: Color paleYellow.
 	browse stayUp: true.
-	browse position: 50@200.
-	browse extent: 400@1000.
+	"browse position: 50@200.
+	browse extent: 400@1000."
+	browse position: (World extent x/26.02)@(World extent y/3.72).
+	browse extent: (World extent x/3.25)@(World extent y).
 		
 	browseHdr := TextMorph new.
 	browseHdr newContents: 'FILES   AVAILABLE'.
 	browseHdr backgroundColor: Color paleBlue .
-	browseHdr extent: 175@50.
+	"browseHdr extent: 175@50."
+	browseHdr extent:(World extent x/7.435)@(World extent y/14.88).
 	browse addMorph: browseHdr  .	
 	
 	
@@ -75,14 +82,18 @@ initialize
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
 	timeStamp newContents: 'Time: ', d asString .
-	timeStamp position: 300@550.
-	timeStamp  extent: 150@50.
+	"timeStamp position: 300@550.
+	timeStamp  extent: 150@50."
+	timeStamp position:(World extent x/4.336)@(World extent y/1.353).
+	timeStamp extent: (World extent x/8.673)@(World extent y/14.88).
 	
 	dateStamp := TextMorph new.
 	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
 	dateStamp newContents: 'Date: ', d asString .
-	dateStamp position: 300@570.
-	dateStamp extent: 150@50.
+	"dateStamp position: 300@570.
+	dateStamp extent: 150@50."
+	dateStamp position: (World extent x/4.336)@(World extent y/1.305).
+	dateStamp extent: (World extent x/8.673)@(World extent y/14.88).
 	
 	backBtn := SimpleButtonMorph newWithLabel: 'Back'.
 	backBtn color: Color paleTan .
@@ -90,29 +101,33 @@ initialize
 	backBtn borderWidth: 3.
 	backBtn helpText: 'BACK'.
 	backBtn roundedCorners: 4 .
-	backBtn position: 800@550.
-	backBtn extent: 100@50.
+	"backBtn position: 800@550.
+	backBtn extent: 100@50."
+	backBtn position: (World extent x/1.626)@(World extent y/1.353).
+	backBtn extent:(World extent x/13.01)@(World extent y/14.88).
 	backBtn on: #click send: #value to: [self boxWindow window close. BrowseFiles delete . IndexInterface open].
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').
-	box extent: (World extent ).
+	aPoint := World extent.
+	box extent: aPoint.
+	
 	box addMorph: header.
 	box addMorph: searchHdr .
 	box addMorph: timeStamp .
 	box addMorph: dateStamp .
 	box addMorph: backBtn .
 	box addMorph: ptm.
-	box addMorph: browse  .
+	box addMorph: browse .
 	
-	  boxPanel := Morph new
+    boxPanel := Morph new
         color: Color black;
         changeTableLayout;
         wrapCentering: #center;
         addMorph: box;
         yourself.
     boxWindow := boxPanel openInWindow.
-    boxWindow setLabel: 'searchQuick'.
-    box position: 150@0.
+    boxWindow setLabel: 'searchQuick - Browse Files'.
     boxWindow fullscreen.
+    boxWindow extent: World extent.
     boxWindow position: 0@0.
 	
