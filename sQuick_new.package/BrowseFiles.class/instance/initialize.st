@@ -26,7 +26,7 @@ initialize
 	searchHdr newContents: 'BROWSE YOUR FILES: Click on the file title in the list and view its content !'.
 	"searchHdr position: 400@150.
 	searchHdr extent: 400@50."
-	searchHdr position: (World extent x/3.25 )@(World extent y/5).
+	searchHdr position: (World extent x/4.336 )@(World extent y/5).
 	searchHdr extent: (World extent x/3.25)@(World extent y/15).
 	searchHdr font: font .
 	
@@ -76,6 +76,7 @@ initialize
 			c title: doc title .
 			c content: doc content.
 			item:= MyMenuItem new chapter: c. 
+			MyMenuItem add: item.
 			].
 		    ] .
 		

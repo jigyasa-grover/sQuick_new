@@ -1,11 +1,13 @@
 {
 	"class" : {
+		"add:" : "jigyasagrover 8/15/2015 22:16",
 		"clear" : "jigyasagrover 6/14/2015 15:19",
 		"menuEntries" : "jigyasagrover 8/15/2015 22:06",
-		"menuEntries:" : "jigyasagrover 8/15/2015 22:06" },
+		"menuEntries:" : "jigyasagrover 8/15/2015 22:06",
+		"remove:" : "jigyasagrover 8/15/2015 22:17" },
 	"instance" : {
 		"chapter:" : "jigyasagrover 6/14/2015 14:44",
 		"initialize" : "jigyasa 7/30/2015 17:06",
 		"interface" : "jigyasagrover 6/14/2015 17:54",
 		"interface:" : "jigyasagrover 6/14/2015 17:55",
-		"mouseDown:" : "jigyasagrover 6/15/2015 20:55" } }
+		"mouseDown:" : "jigyasagrover 8/15/2015 22:41" } }

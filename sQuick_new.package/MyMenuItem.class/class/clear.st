@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 clear
 	1 to: (self allInstances size) 
 	do:[ :index|
