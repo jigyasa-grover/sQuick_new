@@ -5,7 +5,7 @@ printSearchResults
 	self open. 
 	SearchQuick searchQuick: self myString.	
 	"builder := WidgetExamples exampleBuilder."	
-	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR "', myString , '"').
+	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR').
 	
 	exX := (World extent x)-40.
 		
@@ -72,15 +72,14 @@ printSearchResults
 					backBtn borderWidth: 2.
 							}
  			); minWidth: exX; minHeight: World extent y;
- 	model: nil.
+			model: nil.
 	
 	searchResultsAccordion position: 0@0.
 	searchResultsAccordion extent: World extent.
 	searchResultsAccordion width: World extent x.
 	searchResultsAccordion height: World extent y.
 	dialog position: 0@0.
-	dialog  extent: World extent.
-	"dialog openInWorld ." dialog openFullscreen.
+	dialog  extent: World extent.	
+	dialog buttons: nil.
+	dialog openFullscreen.
 	dialog color: Color black.
- 	"builder openModal: dialog."
-	"dialog newScrollPaneFor: searchResultsAccordion ."
