@@ -17,7 +17,7 @@ printSearchResults
 												x  := MyExpanderTitleMorph new.
 												"x newContents: ((r title asString, String cr, r content asString, '......' ) truncateWithElipsisTo: 35)."
 												x titleText: (('TITLE: ', r title asString, String cr, 'CONTENT:  ', r content asString, '......' ) truncateWithElipsisTo: 45).
-												x width: World extent x.
+												x width: World extent x/1.03.
 												
  												dialog newRow: {
  														(
@@ -25,9 +25,9 @@ printSearchResults
 																dialog newExpander: (r title asString  ) 
  																forAll: {
 																		(  dialog newTextEditorFor: (  ValueHolder new contents: r content asString   )
-																		 getText: #contents setText: #contents:  )minHeight: (World extent y)/5.
+																		 getText: #contents setText: #contents:  )height: (World extent y)/3;width:World extent x/1.03.
 																	    }
- 															)minWidth:World extent x; minHeight: 10;color: Color paleMagenta; titleMorph: x; yourself 
+ 															)width:World extent x/1.03; height: World extent y/74.4;color: Color paleMagenta; titleMorph: x; yourself 
  														)
  																cellInset: 0;
  																borderStyle: (BorderStyle inset baseColor: dialog paneColor; width: 1)
@@ -50,13 +50,13 @@ printSearchResults
 				        	dialog newRow: { 
 				   
 							searchBar := dialog newButtonFor: self  action: nil label: ' SEARCH   RESULTS  FOR :  "', myString , '"' help:  'SEARCH   RESULTS  FOR :  "', myString, '"'.
-				        			searchBar width: World extent x/1.58.
+				        			searchBar width: World extent x/1.43.
 							searchBar height: (World extent y)/25.
 							searchBar color: Color orange.
 							searchBar borderColor: Color orange .
 							
 							searchBtn := dialog newButtonFor: self action: #backButtonClicked label: 'SEARCH FOR ANOTHER TERM' help: 'Search For Another Term'.
-							searchBtn width: World extent x/2.8.
+							searchBtn width: World extent x/3.45.
 							searchBtn height: (World extent y)/25.
 							searchBtn color: Color orange.
 							searchBtn borderColor: Color orange .
