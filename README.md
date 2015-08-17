@@ -17,11 +17,10 @@
 
 - Rudimentary GUI built using Morphic.
 - Internal File Browser for current Pharo Image built.
-- Working search functionality .
+- Elementary search functionality .
 - NEXT: GUI Enhancement.
 
-
-
+# Continuous Integration, Automated Build
 
 **Feedbacks are welcome :smiley: kindly fork, explore and suggest !**
 
