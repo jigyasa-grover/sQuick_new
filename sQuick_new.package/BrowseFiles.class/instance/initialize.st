@@ -81,7 +81,7 @@ initialize
 		    ] .
 		
 		MyMenuItem menuEntries do: [ :menuItems |
-			browse addMenuItem: menuItems .
+			browse addMenuItem: menuItems  .
 			 ].
 		
 		"Chapter allSubInstances size > 0 ifTrue: [
