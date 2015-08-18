@@ -49,13 +49,20 @@ printSearchResults
 				dialog newColumn: {
 				        	dialog newRow: { 
 				   
-							searchBar := dialog newButtonFor: self  action: nil label: ' SEARCH   RESULTS  FOR :  "', myString , '"' help:  'SEARCH   RESULTS  FOR :  "', myString, '"'.
+							"searchBar := dialog newButtonFor: self  action: nil label: ' SEARCH   RESULTS  FOR :  ' help:  'SEARCH   RESULTS  FOR :  '.
 				        			searchBar width: World extent x/1.43.
 							searchBar height: (World extent y)/25.
 							searchBar color: Color orange.
-							searchBar borderColor: Color orange .
+							searchBar borderColor: Color orange ."
 							
-							searchBtn := dialog newButtonFor: self action: #backButtonClicked label: 'SEARCH FOR ANOTHER TERM' help: 'Search For Another Term'.
+							searchBar := dialog newTextEntryFor:  self getText:  #myString  setText:  #myString  help: myString asString .
+							searchBar acceptOnCR: true.
+							searchBar width: World extent x/1.43.
+							searchBar height: (World extent y)/25.
+							searchBar color: Color paleOrange .
+							
+							"searchBtn := dialog newButtonFor: self action: #backButtonClicked label: 'SEARCH' help: 'Search For Another Term'."
+							searchBtn  := dialog newButtonFor: self action:  [searchBar accept. self printSearchResults .] label:  'SEARCH' help:  'SEARCH'.
 							searchBtn width: World extent x/3.45.
 							searchBtn height: (World extent y)/25.
 							searchBtn color: Color orange.
