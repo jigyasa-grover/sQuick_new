@@ -6,6 +6,7 @@ printSearchResults
 	SearchQuick searchQuick: self myString.	
 	"builder := WidgetExamples exampleBuilder."	
 	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR').
+	dialog buttons: {  }.
 	
 	exX := (World extent x)-40.
 		
