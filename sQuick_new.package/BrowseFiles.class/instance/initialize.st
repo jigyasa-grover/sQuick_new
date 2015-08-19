@@ -1,7 +1,7 @@
 initialize
 initialize
 	
-	| font resourceFolder resourcePath d boxPanel aPoint c item |
+	| font resourceFolder resourcePath d boxPanel aPoint c item browseScroll |
 	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
 	MCGitHubRepository allSubInstancesDo: 
@@ -38,13 +38,18 @@ initialize
 	ptm extent:(World extent x/2.168)@(World extent y/2.75).
 	txtViewer := ptm textMorph.
 		
+	browseScroll := ScrollPane new.
+	browseScroll position: (World extent x/26.02)@(World extent y/4).
+	browseScroll extent: (World extent x/6.35)@(World extent y/2.75).
+	
+	
 	browse := MenuMorph new.
 	browse color: Color paleYellow.
 	browse stayUp: true.
 	"browse position: 50@200.
 	browse extent: 400@1000."
-	browse position: (World extent x/26.02)@(World extent y/4).
-	browse extent: (World extent x/3.25)@(World extent y/3).
+	"browse position: (World extent x/26.02)@(World extent y/4).
+	browse extent: (World extent x/3.25)@(World extent y/3)."
 		
 	browseHdr := TextMorph new.
 	browseHdr newContents: 'FILES   AVAILABLE'.
@@ -53,7 +58,7 @@ initialize
 	browseHdr extent:(World extent x/7.435)@(World extent y/15).
 	browse addMorph: browseHdr  .	
 	
-	
+	browseScroll scroller addMorph: browse .
 	"----------------------------------------------------------------------------------------------------------"
 	
 	"== FILE ACCESS =="
@@ -135,7 +140,8 @@ initialize
 	box addMorph: dateStamp .
 	box addMorph: backBtn .
 	box addMorph: ptm.
-	box addMorph: browse .
+	"box addMorph: browse ."
+	box addMorph: browseScroll .
 	
     boxPanel := Morph new
         color: Color black;
