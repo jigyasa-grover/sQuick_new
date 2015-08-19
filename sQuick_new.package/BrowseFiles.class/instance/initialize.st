@@ -40,7 +40,7 @@ initialize
 		
 	browseScroll := ScrollPane new.
 	browseScroll position: (World extent x/26.02)@(World extent y/4).
-	browseScroll extent: (World extent x/6.35)@(World extent y/2.75).
+	browseScroll extent: (World extent x/6.33)@(World extent y/2.75).
 	
 	
 	browse := MenuMorph new.
