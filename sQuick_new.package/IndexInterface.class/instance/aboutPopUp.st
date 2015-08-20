@@ -1,4 +1,4 @@
-as yet unclassified
+popUps
 aboutPopUp
 	| builder dialog  aboutMsg |
 	builder := WidgetExamples exampleBuilder.

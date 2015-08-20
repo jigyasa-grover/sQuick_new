@@ -1,4 +1,4 @@
-as yet unclassified
+popUps
 helpPopUp
 	| builder dialog  helpMsg |
 	builder := WidgetExamples exampleBuilder.

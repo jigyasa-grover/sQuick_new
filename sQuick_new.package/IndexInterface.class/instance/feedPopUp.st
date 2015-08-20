@@ -1,4 +1,4 @@
-as yet unclassified
+popUps
 feedPopUp
 	| builder dialog  feedMsg |
 	builder := WidgetExamples exampleBuilder.

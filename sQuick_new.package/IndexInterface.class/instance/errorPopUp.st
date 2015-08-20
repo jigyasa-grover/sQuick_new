@@ -1,4 +1,4 @@
-as yet unclassified
+popUps
 errorPopUp
 	| builder dialog  errorMsg |
 	builder := WidgetExamples exampleBuilder.
