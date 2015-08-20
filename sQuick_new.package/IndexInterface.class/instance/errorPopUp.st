@@ -2,7 +2,7 @@ as yet unclassified
 errorPopUp
 	| builder dialog  errorMsg |
 	builder := WidgetExamples exampleBuilder.
-	dialog := (builder newPluggableDialogWindow: 'ABOUT').
+	dialog := (builder newPluggableDialogWindow: 'Oops !').
 	errorMsg := 'Oops!\Seems you have not entered a *search string*.\Try Again?' withCRs.
 	dialog contentMorph:
 			(
