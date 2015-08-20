@@ -46,13 +46,12 @@ printSearchResults
 			(
 				dialog newColumn: {
 				        	dialog newRow: { 
-							searchBar := dialog newTextEntryFor:  self getText:  #myString  setText:  #myString  help: myString asString .
+							searchBar := dialog newTextEntryFor:  self getText:  #myString  setText:  #myString:  help: myString asString .
 							searchBar acceptOnCR: true.
 							searchBar width: World extent x/1.43.
 							searchBar height: (World extent y)/25.
 							searchBar color: Color paleOrange .
 							
-							"searchBtn  := dialog newButtonFor: self action:  [searchBar accept. self printSearchResults .] label:  'SEARCH' help:  'SEARCH'."
 							searchBtn  := dialog newButtonFor: self action:  #searchButtonClicked label:  'SEARCH' help:  'SEARCH'.
 							searchBtn width: World extent x/3.45.
 							searchBtn height: (World extent y)/25.
