@@ -1,7 +1,5 @@
 submorphs-add/remove
 delete
-	"MyMenuItem clear.
-	Chapter clear."
 	txtViewer isNil ifFalse: [ txtViewer delete].
 	ptm isNil ifFalse: [ ptm delete].
 	txtViewer := nil.

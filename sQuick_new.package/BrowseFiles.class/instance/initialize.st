@@ -2,7 +2,6 @@ initialize
 initialize
 	
 	| font resourceFolder resourcePath d boxPanel aPoint c item browseScroll |
-	"resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'."
 	
 	MCGitHubRepository allSubInstancesDo: 
 									[ :repo |
@@ -10,7 +9,6 @@ initialize
 									]. 
 	resourceFolder  := resourcePath / 'sQuick_new/resources'.
 
-	"font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10."
 	font := StandardFonts defaultFont .
 	StandardFonts listFont: font .
 	StandardFonts menuFont: font.
@@ -24,43 +22,34 @@ initialize
 		
 	searchHdr := TextMorph new.
 	searchHdr newContents: 'BROWSE YOUR FILES: Click on the file title in the list and view its content !'.
-	"searchHdr position: 400@150.
-	searchHdr extent: 400@50."
 	searchHdr position: (World extent x/4.336 )@(World extent y/5).
 	searchHdr extent: (World extent x/3.25)@(World extent y/15).
 	searchHdr font: font .
 	
 	ptm := PluggableTextMorph new.
 	ptm alwaysShowVScrollBar: true.
-	"ptm position: 300@200.
-	ptm extent: 600@300.	"
 	ptm position:(World extent x/4.336)@(World extent y/4).
 	ptm extent:(World extent x/2.168)@(World extent y/2.75).
 	txtViewer := ptm textMorph.
 		
 	browseScroll := ScrollPane new.
 	browseScroll position: (World extent x/26.02)@(World extent y/4).
-	browseScroll extent: (World extent x/6.33)@(World extent y/2.75).
-	
+	browseScroll extent: (World extent x/6.33)@(World extent y/2.75).	
 	
 	browse := MenuMorph new.
 	browse color: Color paleYellow.
 	browse stayUp: true.
-	"browse position: 50@200.
-	browse extent: 400@1000."
-	"browse position: (World extent x/26.02)@(World extent y/4).
-	browse extent: (World extent x/3.25)@(World extent y/3)."
 		
 	browseHdr := TextMorph new.
 	browseHdr newContents: 'FILES   AVAILABLE'.
 	browseHdr backgroundColor: Color paleBlue .
-	"browseHdr extent: 175@50."
 	browseHdr extent:(World extent x/7.435)@(World extent y/15).
 	browse addMorph: browseHdr  .	
 	
 	browseScroll scroller addMorph: browse .
-	"----------------------------------------------------------------------------------------------------------"
 	
+	
+	"----------------------------------------------------------------------------------------------------------"	
 	"== FILE ACCESS =="
 	
 	"Chapter clear.
@@ -88,33 +77,17 @@ initialize
 		MyMenuItem menuEntries do: [ :menuItems |
 			browse addMenuItem: menuItems  .
 			 ].
-		
-		"Chapter allSubInstances size > 0 ifTrue: [
-		1 to: (Chapter allSubInstances size) do: [ :index |
-			|chapter item|
-			chapter := Chapter at: index.
-			item := MyMenuItem new chapter: chapter. 
-			item chapter title == chapter title 
-			isFalse: [ browse  addMenuItem: item.]
-			 ]
-	          ]."
-	
-
-	"---------------------------------------------------------"
+	"----------------------------------------------------------------------------------------------------------"	
 	
 	timeStamp := TextMorph new.
 	d := DateAndTime now asTime.
 	timeStamp newContents: 'Time: ', d asString .
-	"timeStamp position: 300@550.
-	timeStamp  extent: 150@50."
 	timeStamp position:(World extent x/4.336)@(World extent y/1.5).
 	timeStamp extent: (World extent x/8.673)@(World extent y/15).
 	
 	dateStamp := TextMorph new.
 	d := DateAndTime now asDate printFormat: #(1 2 3 $/ 1 1).
 	dateStamp newContents: 'Date: ', d asString .
-	"dateStamp position: 300@570.
-	dateStamp extent: 150@50."
 	dateStamp position: (World extent x/4.336)@(World extent y/1.45).
 	dateStamp extent: (World extent x/8.673)@(World extent y/15).
 	
@@ -124,11 +97,13 @@ initialize
 	backBtn borderWidth: 3.
 	backBtn helpText: 'BACK'.
 	backBtn roundedCorners: 4 .
-	"backBtn position: 800@550.
-	backBtn extent: 100@50."
 	backBtn position: (World extent x/1.626)@(World extent y/1.5).
 	backBtn extent:(World extent x/13.01)@(World extent y/15).
-	backBtn on: #click send: #value to: [self boxWindow window close. BrowseFiles delete . IndexInterface open].
+	backBtn on: #click 
+			send: #value 
+			to: [self boxWindow window close. 
+				BrowseFiles delete . 
+				IndexInterface open].
 	
 	box := ImageMorph withForm: (Form fromFileNamed: resourceFolder / 'rsz_geobg.gif').
 	aPoint := World extent.
@@ -140,17 +115,17 @@ initialize
 	box addMorph: dateStamp .
 	box addMorph: backBtn .
 	box addMorph: ptm.
-	"box addMorph: browse ."
 	box addMorph: browseScroll .
 	
-    boxPanel := Morph new
-        color: Color black;
-        changeTableLayout;
-        wrapCentering: #center;
-        addMorph: box;
+    	boxPanel := Morph new
+        				color: Color black;
+        				changeTableLayout;
+        				wrapCentering: #center;
+        				addMorph: box;
         yourself.
-    boxWindow := boxPanel openInWindow.
-    boxWindow setLabel: 'searchQuick - Browse Files'.
-    boxWindow fullscreen.
-    boxWindow extent: World extent.
-    boxWindow position: 0@0.  
+
+   	 boxWindow := boxPanel openInWindow.
+    	boxWindow setLabel: 'searchQuick - Browse Files'.
+    	boxWindow fullscreen.
+    	boxWindow extent: World extent.
+    	boxWindow position: 0@0.  
