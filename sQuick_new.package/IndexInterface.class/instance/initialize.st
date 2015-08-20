@@ -45,7 +45,7 @@ initialize
 			send: #value 
 			to: 
 			[   searchFor accept . 
-			    (myString isNil) 
+			    (popUp myString isNil) 
 				ifTrue: [self errorPopUp.] 
 				ifFalse: [ popUp printSearchResults . ]
 			].
