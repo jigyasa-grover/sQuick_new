@@ -61,7 +61,14 @@ initialize
 	
 	"srchBtn := self myButtonWithLabel: 'Search' color: Color paleTan borderColor: Color brown helpText: 'Click to search for the entered string' position: 700@120."
 	srchBtn := self myButtonWithLabel: 'Search' color: Color paleTan borderColor: Color brown helpText: 'Click to search for the entered string' position: (World extent x/1.85)@(World extent y/6.2).
-	srchBtn on: #click send: #value to: [searchFor accept . popUp printSearchResults ."popUp openAndPrint  ." ].
+	srchBtn on: #click 
+			send: #value 
+			to: 
+			[   searchFor accept . 
+			    (myString isNil) 
+				ifTrue: [self errorPopUp.] 
+				ifFalse: [ popUp printSearchResults ."popUp openAndPrint  ." ]
+			].
 	
 	"srchBtn := SimpleButtonMorph newWithLabel: 'Search'.
 	srchBtn color: Color paleTan .
