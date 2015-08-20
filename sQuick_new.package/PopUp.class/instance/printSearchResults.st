@@ -1,6 +1,9 @@
 Print Search Results
 printSearchResults
 	| x scrollPane expanders exX searchBtn |
+	
+	dialog ifNotNil: [ dialog delete ].
+	
 	IndexInterface delete . 
 	self open. 
 	SearchQuick searchQuick: self myString.		

@@ -1,5 +1,5 @@
 as yet unclassified
 searchButtonClicked
-  searchBar accept .
+searchBar accept .
  myString := searchBar getText asString .
- self printSearchResults .
+self printSearchResults .
