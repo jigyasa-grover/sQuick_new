@@ -1,5 +1,5 @@
-as yet unclassified
-oldInitialize
+initialization
+Old_initialize
 
 	| font resourceFolder resourcePath d |
 	font := LogicalFont familyName: 'WenQuanYi Micro Hei' pointSize: 10.

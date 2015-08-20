@@ -1,4 +1,4 @@
-as yet unclassified
+running
 run
 	(instance == nil) ifTrue: [
 		instance := PopUp  new.

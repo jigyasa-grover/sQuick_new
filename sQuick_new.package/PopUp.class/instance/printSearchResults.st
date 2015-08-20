@@ -3,8 +3,7 @@ printSearchResults
 	| x scrollPane expanders exX    searchBar searchBtn |
 	IndexInterface delete . 
 	self open. 
-	SearchQuick searchQuick: self myString.	
-	"builder := WidgetExamples exampleBuilder."	
+	SearchQuick searchQuick: self myString.		
 	dialog := (builder newPluggableDialogWindow: 'SEARCH  RESULTS  FOR').
 	dialog buttons: {  }.
 	
@@ -14,9 +13,7 @@ printSearchResults
  							(
 								SearchQuick myResult collect: [ :r |
 												
-												"x := TextMorph new."
 												x  := MyExpanderTitleMorph new.
-												"x newContents: ((r title asString, String cr, r content asString, '......' ) truncateWithElipsisTo: 35)."
 												x titleText: (('TITLE: ', r title asString, String cr, 'CONTENT:  ', r content asString, '......' ) truncateWithElipsisTo: 55).
 												x width: World extent x/1.03.
 												
@@ -49,20 +46,12 @@ printSearchResults
 			(
 				dialog newColumn: {
 				        	dialog newRow: { 
-				   
-							"searchBar := dialog newButtonFor: self  action: nil label: ' SEARCH   RESULTS  FOR :  ' help:  'SEARCH   RESULTS  FOR :  '.
-				        			searchBar width: World extent x/1.43.
-							searchBar height: (World extent y)/25.
-							searchBar color: Color orange.
-							searchBar borderColor: Color orange ."
-							
 							searchBar := dialog newTextEntryFor:  self getText:  #myString  setText:  #myString  help: myString asString .
 							searchBar acceptOnCR: true.
 							searchBar width: World extent x/1.43.
 							searchBar height: (World extent y)/25.
 							searchBar color: Color paleOrange .
 							
-							"searchBtn := dialog newButtonFor: self action: #backButtonClicked label: 'SEARCH' help: 'Search For Another Term'."
 							searchBtn  := dialog newButtonFor: self action:  [searchBar accept. self printSearchResults .] label:  'SEARCH' help:  'SEARCH'.
 							searchBtn width: World extent x/3.45.
 							searchBtn height: (World extent y)/25.
