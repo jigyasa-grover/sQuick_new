@@ -1,4 +1,4 @@
-as yet unclassified
+controlling
 restart
 Smalltalk garbageCollect.
 IndexInterface open.

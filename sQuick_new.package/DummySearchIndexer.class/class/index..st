@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 index: index
 	^ self new
 		index: index;
