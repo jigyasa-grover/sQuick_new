@@ -1,5 +1,9 @@
 as yet unclassified
 searchButtonClicked
 searchBar accept .
- myString := searchBar getText asString .
-self printSearchResults .
+(myString ifNil ) 
+ifTrue: [self errorPopUp ] 
+ifFalse: [ 
+	 myString := searchBar getText asString .
+          self printSearchResults
+               ] .
