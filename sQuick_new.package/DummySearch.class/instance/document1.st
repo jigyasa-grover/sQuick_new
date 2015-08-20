@@ -1,9 +1,5 @@
-as yet unclassified
+dummy documents
 document1
-	
-	"| resourceFolder |
-	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'/'document'."
-	
 	|resourceFolderForDocuments resourcePath |
 	
 	MCGitHubRepository allSubInstancesDo: 

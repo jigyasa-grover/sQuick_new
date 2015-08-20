@@ -1,4 +1,4 @@
-as yet unclassified
+submorphs-add/remove
 delete
 	(instance isNil) ifFalse: [
 		instance delete.

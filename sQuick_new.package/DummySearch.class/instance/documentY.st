@@ -1,9 +1,5 @@
-as yet unclassified
+dummy documents
 documentY
-	
-	"| resourceFolder |
-	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'/'document'."
-	
 	|resourceFolderForDocuments resourcePath |
 	
 	MCGitHubRepository allSubInstancesDo: 
@@ -18,11 +14,3 @@ documentY
 			title: f basenameWithoutExtension;
 			yourself 
 			].
-		
-		"Chapter allSubInstances size > 0 ifTrue: [
-		1 to: (Chapter allSubInstances size) do: [ :index |
-			|chapter |
-			chapter := Chapter at: index.
-			^chapter
-		].
-	]."

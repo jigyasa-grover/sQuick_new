@@ -10,5 +10,4 @@ openWithFileName: fn
 	
 	title := fn.
 	
-	"(FileLocator workingDirectory / 'sQuick_new'/'resources'/'document' / fn) readStreamDo: [ :in| content := in upToEnd]."
 	(FileLocator resourcePath / 'sQuick_new/resources/document'/ fn) readStreamDo: [ :in| content := in upToEnd].

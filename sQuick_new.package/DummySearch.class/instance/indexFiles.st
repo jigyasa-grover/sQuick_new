@@ -1,8 +1,5 @@
 as yet unclassified
 indexFiles
-	"| resourceFolder |
-	resourceFolder := FileSystem workingDirectory / 'sQuick_new' / 'resources'/'document'."
-	
 	|resourceFolderForDocuments resourcePath |
 	
 	MCGitHubRepository allSubInstancesDo: 

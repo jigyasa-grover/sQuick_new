@@ -2,10 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"add:" : "jigyasagrover 6/21/2015 21:52",
-		"at:put:" : "jigyasagrover 6/21/2015 23:31",
+		"add:" : "jigyasagrover 8/20/2015 13:43",
+		"at:put:" : "jigyasagrover 8/20/2015 13:43",
 		"initialize" : "jigyasagrover 6/20/2015 20:27",
 		"newIndexer" : "jigyasagrover 6/20/2015 20:25",
 		"queryFor:" : "jigyasagrover 6/20/2015 20:25",
-		"queryString:" : "jigyasagrover 6/22/2015 14:15",
+		"queryString:" : "jigyasagrover 8/20/2015 13:44",
 		"remove:" : "jigyasagrover 6/20/2015 20:27" } }
