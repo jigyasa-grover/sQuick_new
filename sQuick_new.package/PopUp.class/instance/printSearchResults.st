@@ -1,6 +1,6 @@
 Print Search Results
 printSearchResults
-	| x scrollPane expanders exX    searchBar searchBtn |
+	| x scrollPane expanders exX searchBtn |
 	IndexInterface delete . 
 	self open. 
 	SearchQuick searchQuick: self myString.		
@@ -52,7 +52,8 @@ printSearchResults
 							searchBar height: (World extent y)/25.
 							searchBar color: Color paleOrange .
 							
-							searchBtn  := dialog newButtonFor: self action:  [searchBar accept. self printSearchResults .] label:  'SEARCH' help:  'SEARCH'.
+							"searchBtn  := dialog newButtonFor: self action:  [searchBar accept. self printSearchResults .] label:  'SEARCH' help:  'SEARCH'."
+							searchBtn  := dialog newButtonFor: self action:  #searchButtonClicked label:  'SEARCH' help:  'SEARCH'.
 							searchBtn width: World extent x/3.45.
 							searchBtn height: (World extent y)/25.
 							searchBtn color: Color orange.

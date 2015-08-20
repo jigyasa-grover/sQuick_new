@@ -22,7 +22,8 @@
 		"searchResults",
 		"searchView",
 		"dialog",
-		"searchResultsAccordion" ],
+		"searchResultsAccordion",
+		"searchBar" ],
 	"name" : "PopUp",
 	"pools" : [
 		 ],
