@@ -1,7 +1,7 @@
 as yet unclassified
 searchButtonClicked
 searchBar accept .
-(myString ifNil ) 
+(myString isEmptyOrNil  ) 
 ifTrue: [self errorPopUp ] 
 ifFalse: [ 
 	 myString := searchBar getText asString .
