@@ -25,11 +25,13 @@ Jenkins automated build Status [![Build Status](https://ci.inria.fr/pharo-contri
 - Rudimentary GUI built using Morphic.
 - Internal File Browser for current Pharo Image built.
 - Elementary search functionality .
-- NEXT: GUI Enhancement.
+- GUI Enhancement.
 
 
 
 **Feedbacks are welcome :smiley: kindly fork, explore and suggest !**
+
+*Developed under FOSSASIA for Google Summer of Code 2015*
 
 
 
