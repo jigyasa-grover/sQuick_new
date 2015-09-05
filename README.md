@@ -17,7 +17,7 @@ Check out the [project landing web page](http://jig08.github.io/sQuick_new).
 
 ***
 
-#### **Do it `IndexInterface open` in Playground/Workspace to run.**
+#### **`Do it` `IndexInterface open` in Playground/Workspace to run.**
 
 ***
 
