@@ -1,4 +1,4 @@
-# sQuick_new
+# searchQuick (sQuick_new)
 
 Jenkins automated build Status [![Build Status](https://ci.inria.fr/pharo-contribution/job/sQuick_new/badge/icon)](https://ci.inria.fr/pharo-contribution/job/sQuick_new/) at [Continuous Integration, Inria] (https://ci.inria.fr/)
 
@@ -13,14 +13,13 @@ Check out the [project landing web page](http://jig08.github.io/sQuick_new).
 
 - The project can be directly loaded via the `Configuration Browser` in `Pharo 4.0`
 
-- `World` > `Tools` > `Configuration Browser` > `sQuick_new(jigyasagrover)`
+  **Steps to load:** `World` > `Tools` > `Configuration Browser` > `sQuick_new(jigyasagrover)`
 
+***
 
+#### **Do it `IndexInterface open` in Playground/Workspace to run.**
 
-###### **Do it `IndexInterface open` in Playground/Workspace to check it out.**
-
-
-
+***
 
 # Current Status
 
@@ -29,11 +28,21 @@ Check out the [project landing web page](http://jig08.github.io/sQuick_new).
 - Elementary search functionality .
 - GUI Enhancement.
 
+***
 
+# The Road Ahead ...
 
-**Feedbacks are welcome :smiley: kindly fork, explore and suggest !**
+- Embellish GUI
+- Augment relative re-sizing of backgrounds, images, fonts etc.
+- Optimize search functionality
+- Highlighting of 'search words' within the search results
 
-*Developed under FOSSASIA for Google Summer of Code 2015*
+Check out the [issues](https://github.com/jig08/sQuick_new/issues).
 
+#### Fork, Explore and Suggest/Contribute !
 
+**Feedback is welcome :smiley:**
 
+***
+
+*Developed with :heart: under FOSSASIA for Google Summer of Code 2015*
