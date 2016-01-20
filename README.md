@@ -1,4 +1,4 @@
-# searchQuick (sQuick_new)
+# :mag: searchQuick (sQuick_new)
 
 Jenkins automated build Status [![Build Status](https://ci.inria.fr/pharo-contribution/job/sQuick_new/badge/icon)](https://ci.inria.fr/pharo-contribution/job/sQuick_new/) at [Continuous Integration, Inria] (https://ci.inria.fr/)
 
